@@ -139,3 +139,4 @@ sample/frontend/.env
 *.keystore
 *.truststore
 .venv-sk/
+.github\chatmodes\beastmode3.1.chatmode.md
