@@ -42,6 +42,7 @@ ai-foundry-e2e-lab/
 ├── 🤖 agents/                 # AI Agents development and tools
 ├── 🔄 multi-agent/            # Multi-agent systems and orchestration
 ├── 🔌 agents-with-mcp/        # Model Context Protocol (MCP) integration
+├── 🔴 ai-red-teaming-agent/   # AI Red Teaming and Security Testing
 ├── 🏗️ frameworks/             # Advanced frameworks (Semantic Kernel, AutoGen)
 ├── 📊 observalibility/         # Monitoring, evaluation, and quality assurance
 
@@ -177,7 +178,14 @@ Follow this structured learning path to master Azure AI Foundry:
 |----------|-------------|
 | 🔌 [MCP Inventory Agent](agents-with-mcp/README.md) | Complete working implementation of agents that connect to MCP servers for dynamic tool discovery. Features an intelligent inventory management agent for a cosmetics retailer with automated restock and clearance recommendations. Includes both client and server implementations with interactive chat interface. |
 
-### 🏗️ Phase 6: Advanced Frameworks
+### 🔴 Phase 6: AI Red Teaming & Security Testing
+**Location:** `ai-red-teaming-agent/`
+
+| Implementation | Description |
+|----------|-------------|
+| 🔴 [AI Red Teaming Agent](ai-red-teaming-agent/README.md) | Advanced AI security testing and vulnerability assessment using red teaming methodologies. Features automated adversarial prompt generation, safety evaluation, and comprehensive security analysis of AI systems. |
+
+### 🏗️ Phase 7: Advanced Frameworks
 **Location:** `frameworks/`
 
 | Notebook | Description |
@@ -186,7 +194,7 @@ Follow this structured learning path to master Azure AI Foundry:
 | 🤖 [AutoGen Multi-Agent RAG](frameworks/2-autogen-multi-agent-rag.ipynb) | Automated agent generation |
 | ❤️ [AutoGen Personalized Analytics](frameworks/3-autogen-personalized-heart-rate.ipynb) | Health domain specialization |
 
-### 📊 Phase 7: Quality & Operations
+### 📊 Phase 8: Quality & Operations
 **Location:** `observalibility/`
 
 | Notebook | Description |
