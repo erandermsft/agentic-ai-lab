@@ -23,8 +23,9 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 3. Agents – File Search, Bing, Azure Functions
 4. Multi-Agent Orchestration + Tracing
 5. Model Context Protocol (MCP) with Agents
-6. Frameworks – AutoGen, Semantic Kernel
-7. Observability & Evaluation
+6. AI Red Teaming & Security Testing
+7. Frameworks – AutoGen, Semantic Kernel
+8. Observability & Evaluation
 
 
 > **🎓 Laboratory Format**: One day intensive hands-on experience  
