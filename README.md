@@ -26,6 +26,9 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 6. AI Red Teaming & Security Testing
 7. Frameworks – AutoGen, Semantic Kernel
 8. Observability & Evaluation
+9. AI Language Services with Low-Code Workflows
+10. AI Vision with Low-Code Solutions
+11. Responsible AI & Content Safety
 
 
 > **🎓 Laboratory Format**: One day intensive hands-on experience  
@@ -46,7 +49,9 @@ ai-foundry-e2e-lab/
 ├── 🔴 ai-red-teaming-agent/   # AI Red Teaming and Security Testing
 ├── 🏗️ frameworks/             # Advanced frameworks (Semantic Kernel, AutoGen)
 ├── 📊 observalibility/         # Monitoring, evaluation, and quality assurance
-
+├── 🗣️ ai-language/             # AI Language Services with Logic Apps low-code workflows
+├── 👁️ ai-vision/               # AI Vision Services with low-code solutions
+└── 🛡️ responsible-ai/          # Responsible AI, Content Safety, and PII Detection
 ```
 
 ---
@@ -202,6 +207,31 @@ Follow this structured learning path to master Azure AI Foundry:
 |----------|-------------|
 | 👁️ [Observability](observalibility/1-Observability.ipynb) | Monitoring and telemetry |
 | 📈 [Evaluation](observalibility/2-evaluation.ipynb) | Quality assessment and benchmarking |
+
+### 🗣️ Phase 9: AI Language Services with Low-Code Workflows
+**Location:** `ai-language/`
+
+| Implementation | Description |
+|----------|-------------|
+| 🔤 [AI Language Service Lab](ai-language/README.md) | Low-code Logic Apps for PII removal, language detection, and translation. Build workflow solutions for processing multilingual customer feedback with privacy compliance and centralized analytics. |
+
+### 👁️ Phase 10: AI Vision Services with Low-Code Solutions  
+**Location:** `ai-vision/`
+
+| Implementation | Description |
+|----------|-------------|
+| 👀 [AI Vision Lab Guide](ai-vision/README.md) | Azure AI Vision low-code exercises including OCR, face detection, image analysis, and video indexing using Vision Studio |
+| 📓 [AI Vision Services Notebook](ai-vision/LabFiles/AI_vision_services_lab.ipynb) | Hands-on Jupyter notebook for computer vision capabilities |
+
+### 🛡️ Phase 11: Responsible AI & Content Safety
+**Location:** `responsible-ai/`
+
+| Implementation | Description |
+|----------|-------------|
+| 🛡️ [Responsible AI Lab Guide](responsible-ai/README.md) | Comprehensive exploration of AI safety including manual and automated evaluations, content safety filters, PII detection and masking |
+| 📊 [Evaluation Data](responsible-ai/Files/Evaluations/) | Manual and automated evaluation datasets for AI model testing |
+| 🛡️ [Content Safety Data](responsible-ai/Files/Content_Safety/) | Bulk datasets for text and image moderation testing |
+| 📚 [Sample Documents](responsible-ai/Files/Contoso/) | Corporate documents for PII detection and content analysis exercises |
 
 ---
 
