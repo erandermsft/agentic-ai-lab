@@ -1,36 +1,36 @@
 # Azure AI Content Understanding - Classifier and Analyzer Lab  
 
-## Overview
+## Overview  
 
 This lab demonstrates how to use Azure AI Content Understanding to automate the classification and extraction of information from bundled document files (such as insurance claims, statements, bills, and receipts). Students will learn to:  
 
-- Build a classifier to categorize documents within a single PDF bundle.
-- Create custom analyzers to extract specific fields from different document types.
-- Combine classifiers and analyzers for enhanced document processing.
-- Process a sample PDF bundle, split it into logical documents, and extract structured data.
+- Build a classifier to categorize documents within a single PDF bundle.  
+- Create custom analyzers to extract specific fields from different document types.  
+- Combine classifiers and analyzers for enhanced document processing.  
+- Process a sample PDF bundle, split it into logical documents, and extract structured data.  
 
-## Prerequisites
+## Prerequisites  
 
-- An active Azure subscription.
-- An AI Foundry Resource in Azure (supported regions: westus, swedencentral, australiaeast).
-- The provided sample PDF file (sample claim submission.pdf).
-- The AzureContentUnderstandingClient.py file in your working directory.
-- A .env file with the required environment variables.
+- An active Azure subscription.  
+- An AI Foundry Resource in Azure (supported regions: westus, swedencentral, australiaeast).  
+- The provided sample PDF file (sample claim submission.pdf).  
+- The AzureContentUnderstandingClient.py file in your working directory.  
+- A .env file with the required environment variables.  
 
-## Lab Instructions
+## Lab Instructions  
 
-### 0. Setup
+### 0. Setup  
 
-**Before you begin:**
+**Before you begin:**  
 
-1. Ensure you have all prerequisites.
-2. Update your .env file with:
+1. Ensure you have all prerequisites.  
+2. Update your .env file with:  
 
-SERVICE_FOR_CU: Endpoint of your Azure Content Understanding service.
-SERVICE_API_FOR_CU: API version (e.g., 2025-05-01-preview).
-SAMPLE_CLAIMS_BUNDLE: Path to your sample PDF.
+SERVICE_FOR_CU: Endpoint of your Azure Content Understanding service.  
+SERVICE_API_FOR_CU: API version (e.g., 2025-05-01-preview).  
+SAMPLE_CLAIMS_BUNDLE: Path to your sample PDF.  
 
-### 1. Import Required Libraries
+### 1. Import Required Libraries  
 
 **Cell Purpose:**  
 
