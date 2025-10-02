@@ -23,8 +23,12 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 3. Agents – File Search, Bing, Azure Functions
 4. Multi-Agent Orchestration + Tracing
 5. Model Context Protocol (MCP) with Agents
-6. Frameworks – AutoGen, Semantic Kernel
-7. Observability & Evaluation
+6. AI Red Teaming & Security Testing
+7. Frameworks – AutoGen, Semantic Kernel
+8. Observability & Evaluation
+9. AI Language Services with Low-Code Workflows
+10. AI Vision with Low-Code Solutions
+11. Responsible AI & Content Safety
 
 
 > **🎓 Laboratory Format**: One day intensive hands-on experience  
@@ -42,9 +46,12 @@ ai-foundry-e2e-lab/
 ├── 🤖 agents/                 # AI Agents development and tools
 ├── 🔄 multi-agent/            # Multi-agent systems and orchestration
 ├── 🔌 agents-with-mcp/        # Model Context Protocol (MCP) integration
+├── 🔴 ai-red-teaming-agent/   # AI Red Teaming and Security Testing
 ├── 🏗️ frameworks/             # Advanced frameworks (Semantic Kernel, AutoGen)
 ├── 📊 observalibility/         # Monitoring, evaluation, and quality assurance
-
+├── 🗣️ ai-language/             # AI Language Services with Logic Apps low-code workflows
+├── 👁️ ai-vision/               # AI Vision Services with low-code solutions
+└── 🛡️ responsible-ai/          # Responsible AI, Content Safety, and PII Detection
 ```
 
 ---
@@ -177,7 +184,14 @@ Follow this structured learning path to master Azure AI Foundry:
 |----------|-------------|
 | 🔌 [MCP Inventory Agent](agents-with-mcp/README.md) | Complete working implementation of agents that connect to MCP servers for dynamic tool discovery. Features an intelligent inventory management agent for a cosmetics retailer with automated restock and clearance recommendations. Includes both client and server implementations with interactive chat interface. |
 
-### 🏗️ Phase 6: Advanced Frameworks
+### 🔴 Phase 6: AI Red Teaming & Security Testing
+**Location:** `ai-red-teaming-agent/`
+
+| Implementation | Description |
+|----------|-------------|
+| 🔴 [AI Red Teaming Agent](ai-red-teaming-agent/README.md) | Advanced AI security testing and vulnerability assessment using red teaming methodologies. Features automated adversarial prompt generation, safety evaluation, and comprehensive security analysis of AI systems. |
+
+### 🏗️ Phase 7: Advanced Frameworks
 **Location:** `frameworks/`
 
 | Notebook | Description |
@@ -186,13 +200,38 @@ Follow this structured learning path to master Azure AI Foundry:
 | 🤖 [AutoGen Multi-Agent RAG](frameworks/2-autogen-multi-agent-rag.ipynb) | Automated agent generation |
 | ❤️ [AutoGen Personalized Analytics](frameworks/3-autogen-personalized-heart-rate.ipynb) | Health domain specialization |
 
-### 📊 Phase 7: Quality & Operations
+### 📊 Phase 8: Quality & Operations
 **Location:** `observalibility/`
 
 | Notebook | Description |
 |----------|-------------|
 | 👁️ [Observability](observalibility/1-Observability.ipynb) | Monitoring and telemetry |
 | 📈 [Evaluation](observalibility/2-evaluation.ipynb) | Quality assessment and benchmarking |
+
+### 🗣️ Phase 9: AI Language Services with Low-Code Workflows
+**Location:** `ai-language/`
+
+| Implementation | Description |
+|----------|-------------|
+| 🔤 [AI Language Service Lab](ai-language/README.md) | Low-code Logic Apps for PII removal, language detection, and translation. Build workflow solutions for processing multilingual customer feedback with privacy compliance and centralized analytics. |
+
+### 👁️ Phase 10: AI Vision Services with Low-Code Solutions  
+**Location:** `ai-vision/`
+
+| Implementation | Description |
+|----------|-------------|
+| 👀 [AI Vision Lab Guide](ai-vision/README.md) | Azure AI Vision low-code exercises including OCR, face detection, image analysis, and video indexing using Vision Studio |
+| 📓 [AI Vision Services Notebook](ai-vision/LabFiles/AI_vision_services_lab.ipynb) | Hands-on Jupyter notebook for computer vision capabilities |
+
+### 🛡️ Phase 11: Responsible AI & Content Safety
+**Location:** `responsible-ai/`
+
+| Implementation | Description |
+|----------|-------------|
+| 🛡️ [Responsible AI Lab Guide](responsible-ai/README.md) | Comprehensive exploration of AI safety including manual and automated evaluations, content safety filters, PII detection and masking |
+| 📊 [Evaluation Data](responsible-ai/Files/Evaluations/) | Manual and automated evaluation datasets for AI model testing |
+| 🛡️ [Content Safety Data](responsible-ai/Files/Content_Safety/) | Bulk datasets for text and image moderation testing |
+| 📚 [Sample Documents](responsible-ai/Files/Contoso/) | Corporate documents for PII detection and content analysis exercises |
 
 ---
 

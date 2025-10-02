@@ -138,3 +138,7 @@ sample/frontend/.env
 *.jks
 *.keystore
 *.truststore
+.venv-sk/
+
+# GitHub chatmodes
+.github/chatmodes/
