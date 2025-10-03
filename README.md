@@ -110,26 +110,29 @@ python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foun
    | Model Type | Recommended Models | Purpose |
    |------------|-------------------|---------|
    | **Chat/Completion** | `gpt-4o`, `gpt-4o-mini` | Primary reasoning & conversation |
-   | **Embeddings** | `text-embedding-3-large` | Vector search & RAG |
+   | **Text Embeddings** | `text-embedding-3-large` | Vector search & RAG |
+   | **(Optional) Image Embeddings** | `cohere-embed-v3-english` | Image search & multimodal tasks |
+   | **Image Generation** | `dall-e-3` | Image creation from text |
    | **Specialized** | `phi-4`, `deepseek-r1` | Domain-specific tasks |
-   | **Search Service** | `Azure AI Search` | Knowledge base & enterprise search integration |
 
-3. **Configure Environment Variables**
-   ```env
-   PROJECT_CONNECTION_STRING=your-project-connection-string
-   AZURE_AI_PROJECT_ENDPOINT=your-azure-ai-project-endpoint
-   MODEL_DEPLOYMENT_NAME=your-primary-model-deployment-name
-   EMBEDDING_MODEL_DEPLOYMENT_NAME=your-embedding-model-deployment-name
-   TENANT_ID=your-azure-tenant-id
-   GROUNDING_WITH_BING_CONNECTION_NAME=your-bing-search-connection-name
-   SERVERLESS_MODEL_NAME=your-serverless-model-name
-   
-   # Additional info for Knowledge (Azure AI Search)
-   AZURE_AI_SEARCH_ENDPOINT=your-azure-ai-search-endpoint
-   AZURE_AI_SEARCH_API_VERSION=your-azure-ai-search-api-version
-   SEARCH_AUTHENTICATION_METHOD=your-search-authentication-method
-   AZURE_AI_SEARCH_API_KEY=your-azure-ai-search-api-key
-   ```
+3. **Configure an Azure OpenAI Resource**
+   - Create an Azure OpenAI resource in the same region as your AI Foundry project
+   - Connect this resource to your AI Foundry project
+      - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Azure OpenAI
+
+4. **Configure an Azure Search Service**
+   - Create an Azure AI Search resource in Azure
+   - Connect this resource to your AI Foundry project
+      - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Azure AI Search
+
+5. **Configure Grounding with Bing Search**
+   - Create a new Grounding with Bing Search resource in Azure
+   - Connect this resource to your AI Foundry project
+      - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Grounding with Bing Search
+
+6. **Configure Environment Variables**
+   - Copy `.env.example` to `.env` in the root directory and update values accordingly
+   - This repository expects the `.env` file to be in the root directory, if you want to store it elsewhere or name it something else, update the `load_dotenv()` calls in notebooks
 
 ---
 
