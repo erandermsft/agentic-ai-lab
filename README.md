@@ -135,8 +135,7 @@ python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foun
 6. **Create Content Understanding Resource**
    - Create an Azure AI Content Understanding multi-service resource following the [official documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/how-to/create-multi-service-resource)
    - Ensure the resource is created in a supported region (westus, swedencentral, australiaeast)
-   - Connect this resource to your AI Foundry project for document classification and content extraction capabilities
-
+  
 7. **Configure Environment Variables**
    - Copy `.env.example` to `.env` in the root directory and update values accordingly
    - This repository expects the `.env` file to be in the root directory, if you want to store it elsewhere or name it something else, update the `load_dotenv()` calls in notebooks
