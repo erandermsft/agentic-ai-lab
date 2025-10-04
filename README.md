@@ -350,6 +350,5 @@ Please review our [Contributing Guide](CONTRIBUTING.md) for:
 
 ## 📄 License & Attribution
 
-**Created by:** Kapil Dhanger  
 **License:** MIT License  
 **Repository:** [github.com/dhangerkapil/ai-foundry-e2e-lab](https://github.com/dhangerkapil/ai-foundry-e2e-lab)
