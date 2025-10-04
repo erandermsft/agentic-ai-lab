@@ -28,7 +28,8 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 8. Observability & Evaluation
 9. AI Language Services with Low-Code Workflows
 10. AI Vision with Low-Code Solutions
-11. Responsible AI & Content Safety
+11. Content Understanding & Document Classification
+12. Responsible AI & Content Safety
 
 
 > **🎓 Laboratory Format**: One day intensive hands-on experience  
@@ -51,6 +52,7 @@ ai-foundry-e2e-lab/
 ├── 📊 observalibility/         # Monitoring, evaluation, and quality assurance
 ├── 🗣️ ai-language/             # AI Language Services with Logic Apps low-code workflows
 ├── 👁️ ai-vision/               # AI Vision Services with low-code solutions
+├── 📄 content-understanding/   # Document classification and content extraction
 └── 🛡️ responsible-ai/          # Responsible AI, Content Safety, and PII Detection
 ```
 
@@ -226,7 +228,17 @@ Follow this structured learning path to master Azure AI Foundry:
 | 👀 [AI Vision Lab Guide](ai-vision/README.md) | Azure AI Vision low-code exercises including OCR, face detection, image analysis, and video indexing using Vision Studio |
 | 📓 [AI Vision Services Notebook](ai-vision/LabFiles/AI_vision_services_lab.ipynb) | Hands-on Jupyter notebook for computer vision capabilities |
 
-### 🛡️ Phase 11: Responsible AI & Content Safety
+### � Phase 11: Content Understanding & Document Classification
+**Location:** `content-understanding/`
+
+| Implementation | Description |
+|----------|-------------|
+| 📄 [Content Understanding Lab Guide](content-understanding/README.md) | Azure AI Content Understanding for document classification and field extraction from bundled PDF files |
+| 📓 [Classifier Notebook](content-understanding/classifier.ipynb) | Hands-on Jupyter notebook for building document classifiers and analyzers |
+| 🐍 [Content Understanding Client](content-understanding/content_understanding_client.py) | Python client implementation for Azure AI Content Understanding API |
+| 📋 [Sample Data](content-understanding/Data/) | Sample PDF documents for testing classification and extraction workflows |
+
+### �🛡️ Phase 12: Responsible AI & Content Safety
 **Location:** `responsible-ai/`
 
 | Implementation | Description |
