@@ -24,12 +24,13 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 4. Multi-Agent Orchestration + Tracing
 5. Model Context Protocol (MCP) with Agents
 6. AI Red Teaming & Security Testing
-7. Frameworks – AutoGen, Semantic Kernel
-8. Observability & Evaluation
-9. AI Language Services with Low-Code Workflows
-10. AI Vision with Low-Code Solutions
-11. Content Understanding & Document Classification
-12. Responsible AI & Content Safety
+7. Agent Framework – Advanced Agent Development
+8. Frameworks – AutoGen, Semantic Kernel
+9. Observability & Evaluation
+10. AI Language Services with Low-Code Workflows
+11. AI Vision with Low-Code Solutions
+12. Content Understanding & Document Classification
+13. Responsible AI & Content Safety
 
 
 > **🎓 Laboratory Format**: One day intensive hands-on experience  
@@ -48,7 +49,8 @@ ai-foundry-e2e-lab/
 ├── 🔄 multi-agent/            # Multi-agent systems and orchestration
 ├── 🔌 agents-with-mcp/        # Model Context Protocol (MCP) integration
 ├── 🔴 ai-red-teaming-agent/   # AI Red Teaming and Security Testing
-├── 🏗️ frameworks/             # Advanced frameworks (Semantic Kernel, AutoGen)
+├── 🤖⚙️ agent-framework/        # Microsoft Agent Framework for advanced agent development
+├── 🏗️ sk-and-autogen/          # Semantic Kernel and AutoGen frameworks
 ├── 📊 observalibility/         # Monitoring, evaluation, and quality assurance
 ├── 🗣️ ai-language/             # AI Language Services with Logic Apps low-code workflows
 ├── 👁️ ai-vision/               # AI Vision Services with low-code solutions
@@ -200,16 +202,35 @@ Follow this structured learning path to master Azure AI Foundry:
 |----------|-------------|
 | 🔴 [AI Red Teaming Agent](ai-red-teaming-agent/README.md) | Advanced AI security testing and vulnerability assessment using red teaming methodologies. Features automated adversarial prompt generation, safety evaluation, and comprehensive security analysis of AI systems. |
 
-### 🏗️ Phase 7: Advanced Frameworks
-**Location:** `frameworks/`
+### 🤖⚙️ Phase 7: Microsoft Agent Framework
+**Location:** `agent-framework/`
+
+The **Microsoft Agent Framework** is an open-source development kit that unifies and extends Semantic Kernel and AutoGen into the next-generation foundation for AI agent development. Built by the same teams, it offers two primary capabilities: **AI Agents** for autonomous decision-making with tool integration and conversation management, and **Workflows** for orchestrating complex multi-agent processes with type safety and checkpointing. Currently in public preview, it combines AutoGen's simple abstractions with Semantic Kernel's enterprise features while adding robust workflow capabilities.
+
+📖 [Official Documentation](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) • 🔗 [GitHub Repository](https://github.com/microsoft/agent-framework)
 
 | Notebook | Description |
 |----------|-------------|
-| 🔧 [RAG + Semantic Kernel + Agents](frameworks/1-rag-sk-agents-aisearch.ipynb) | Microsoft's orchestration framework |
-| 🤖 [AutoGen Multi-Agent RAG](frameworks/2-autogen-multi-agent-rag.ipynb) | Automated agent generation |
-| ❤️ [AutoGen Personalized Analytics](frameworks/3-autogen-personalized-heart-rate.ipynb) | Health domain specialization |
+| 🤖 [Basic Agent Usage](agent-framework/azure_ai_basic.ipynb) | Fundamental agent concepts with automatic lifecycle management |
+| ⚙️ [Explicit Settings](agent-framework/azure_ai_with_explicit_settings.ipynb) | Agent creation with explicit configuration patterns |
+| 🔄 [Existing Agent Management](agent-framework/azure_ai_with_existing_agent.ipynb) | Working with pre-existing agents using agent IDs |
+| 💬 [Thread Management](agent-framework/azure_ai_with_existing_thread.ipynb) | Conversation thread continuity and management |
+| 🔧 [Function Tools](agent-framework/azure_ai_with_function_tools.ipynb) | Comprehensive function tool integration patterns |
+| 💻 [Code Interpreter](agent-framework/azure_ai_with_code_interpreter.ipynb) | Python code execution and mathematical problem solving |
+| 📄 [File Search](agent-framework/azure_ai_with_file_search.ipynb) | Document-based question answering with file uploads |
+| 🌐 [Bing Grounding](agent-framework/azure_ai_with_bing_grounding.ipynb) | Web search integration using Bing Grounding |
+| 🔌 [MCP Integration](agent-framework/azure_ai_with_mcp.ipynb) | Model Context Protocol (MCP) tool integration |
 
-### 📊 Phase 8: Quality & Operations
+### 🏗️ Phase 8: Semantic Kernel + AutoGen
+**Location:** `sk-and-autogen/`
+
+| Notebook | Description |
+|----------|-------------|
+| 🔧 [RAG + Semantic Kernel + Agents](sk-and-autogen/1-rag-sk-agents-aisearch.ipynb) | Microsoft's orchestration framework |
+| 🤖 [AutoGen Multi-Agent RAG](sk-and-autogen/2-autogen-multi-agent-rag.ipynb) | Automated agent generation |
+| ❤️ [AutoGen Personalized Analytics](sk-and-autogen/3-autogen-personalized-heart-rate.ipynb) | Health domain specialization |
+
+### 📊 Phase 9: Quality & Operations
 **Location:** `observalibility/`
 
 | Notebook | Description |
@@ -217,14 +238,14 @@ Follow this structured learning path to master Azure AI Foundry:
 | 👁️ [Observability](observalibility/1-Observability.ipynb) | Monitoring and telemetry |
 | 📈 [Evaluation](observalibility/2-evaluation.ipynb) | Quality assessment and benchmarking |
 
-### 🗣️ Phase 9: AI Language Services with Low-Code Workflows
+### 🗣️ Phase 10: AI Language Services with Low-Code Workflows
 **Location:** `ai-language/`
 
 | Implementation | Description |
 |----------|-------------|
 | 🔤 [AI Language Service Lab](ai-language/README.md) | Low-code Logic Apps for PII removal, language detection, and translation. Build workflow solutions for processing multilingual customer feedback with privacy compliance and centralized analytics. |
 
-### 👁️ Phase 10: AI Vision Services with Low-Code Solutions  
+### 👁️ Phase 12: AI Vision Services with Low-Code Solutions  
 **Location:** `ai-vision/`
 
 | Implementation | Description |
@@ -232,7 +253,7 @@ Follow this structured learning path to master Azure AI Foundry:
 | 👀 [AI Vision Lab Guide](ai-vision/README.md) | Azure AI Vision low-code exercises including OCR, face detection, image analysis, and video indexing using Vision Studio |
 | 📓 [AI Vision Services Notebook](ai-vision/LabFiles/AI_vision_services_lab.ipynb) | Hands-on Jupyter notebook for computer vision capabilities |
 
-### � Phase 11: Content Understanding & Document Classification
+### 📄 Phase 13: Content Understanding & Document Classification
 **Location:** `content-understanding/`
 
 | Implementation | Description |
@@ -242,7 +263,7 @@ Follow this structured learning path to master Azure AI Foundry:
 | 🐍 [Content Understanding Client](content-understanding/content_understanding_client.py) | Python client implementation for Azure AI Content Understanding API |
 | 📋 [Sample Data](content-understanding/Data/) | Sample PDF documents for testing classification and extraction workflows |
 
-### �🛡️ Phase 12: Responsible AI & Content Safety
+### 🛡️ Phase 14: Responsible AI & Content Safety
 **Location:** `responsible-ai/`
 
 | Implementation | Description |

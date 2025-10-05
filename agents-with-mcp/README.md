@@ -127,7 +127,7 @@ ai-foundry-e2e-lab/
 │   └── README.md               # This file
 ├── agents/                      # Other agent examples
 ├── chat-rag/                    # RAG examples
-├── frameworks/                  # Framework examples
+├── sk-and-autogen/              # Semantic Kernel and AutoGen framework examples
 └── ...                         # Other lab modules
 ```
 
