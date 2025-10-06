@@ -1,0 +1,81 @@
+version: '3'
+
+env:
+  AIF_BASIC_TITLE: "AI Foundry - End to End Workshop"
+  DEFAULT_REGION: eastus2
+
+tasks:
+  default: 
+    cmds: 
+    - task --list 
+  
+  up: 
+    desc: Builds a Complete {{.AIF_BASIC_TITLE}} Environment
+    cmds:
+    - task: init
+    - task: apply 
+    - task: creds
+
+  init:
+    dir: ./infrastructure
+    desc: Initializes Terraform workspace
+    cmds:
+    - terraform workspace new {{.REGION}} || true
+    - terraform workspace select {{.REGION}}
+    - terraform init
+    vars: 
+      REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
+
+  apply:
+    dir: ./infrastructure
+    desc: Creates Azure infrastructure
+    cmds:
+    - terraform apply -auto-approve
+      -var "region={{.REGION}}" 
+      -var "tags={{.AIF_BASIC_TITLE}}"
+      -compact-warnings
+    vars: 
+      REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
+
+  refresh:
+    dir: ./infrastructure
+    cmds:
+    - terraform refresh
+      -var "region={{.REGION}}" 
+      -var "tags={{.AIF_BASIC_TITLE}}"
+      -compact-warnings
+    vars: 
+      REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
+
+  down:
+    dir: ./infrastructure
+    desc: Destroys all Azure resources and cleans up Terraform
+    cmds:       
+    - terraform destroy -var "region={{.REGION}}" -var "tags={{.AIF_BASIC_TITLE}}" -compact-warnings || true
+    - rm -rf terraform.tfstate.d .terraform.lock.hcl .terraform terraform.tfstate terraform.tfstate.backup .terraform.tfstate.lock.info || true
+    vars: 
+      REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
+
+
+  creds:
+    dir: ./infrastructure
+    cmds:  
+    - silent: true
+      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"PROJECT_CONNECTION_STRING=" + .PROJECT_CONNECTION_STRING.value'  > ../.env &
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_PROJECT_ENDPOINT=" + .AZURE_AI_PROJECT_ENDPOINT.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"MODEL_DEPLOYMENT_NAME=" + .MODEL_DEPLOYMENT_NAME.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"EMBEDDING_MODEL_DEPLOYMENT_NAME=" + .EMBEDDING_MODEL_DEPLOYMENT_NAME.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"TENANT_ID=" + .TENANT_ID.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_SUBSCRIPTION_ID=" + .AZURE_SUBSCRIPTION_ID.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"GROUNDING_WITH_BING_CONNECTION_NAME=" + .GROUNDING_WITH_BING_CONNECTION_NAME.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_ENDPOINT= "+ .AZURE_AI_SEARCH_ENDPOINT.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_API_KEY=" + .AZURE_AI_SEARCH_API_KEY.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"SERVICE_FOR_CU=" + .SERVICE_FOR_CU.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"SERVICE_API_FOR_CU=" + .SERVICE_API_FOR_CU.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"SAMPLE_CLAIMS_BUNDLE=" + .SAMPLE_CLAIMS_BUNDLE.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_ENDPOINT=" + .AZURE_OPENAI_ENDPOINT.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_API_KEY=" + .AZURE_OPENAI_API_KEY.value' >> ../.env & 
+            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_DEPLOYMENT=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env
+    vars:
+      TF_OUTPUT: 
+        sh: terraform output -json
