@@ -149,7 +149,7 @@ async def chat_loop(session):
 
     # Delete the agent when done
     print("Cleaning up agents:")
-    agents_client.delete_agent(agent.id)
+    ##agents_client.delete_agent(agent.id)
     print("Deleted inventory agent.")
 
 
