@@ -68,7 +68,7 @@ The `.env` file already contains your Azure project configuration.
 ### Step 3: Verify Your Configuration
 
 The project will automatically use these values from the root `.env` file:
-- `PROJECT_CONNECTION_STRING`: Your Azure AI project endpoint
+- `AI_FOUNDRY_PROJECT_ENDPOINT`: Your Azure AI project endpoint
 - `MODEL_DEPLOYMENT_NAME`: Your deployed model (currently: `gpt-4o`)
 - `TENANT_ID`: Your Azure tenant ID
 
