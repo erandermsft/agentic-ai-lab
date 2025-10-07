@@ -10,6 +10,11 @@ from azure.ai.agents import AgentsClient
 from azure.ai.agents.models import FunctionTool, MessageRole, ListSortOrder
 from azure.identity import DefaultAzureCredential
 
+##need 
+##mcp-1.16.0 - Core MCP framework -pip install mcp --upgrade
+##fastmcp-2.12.4 - FastMCP server framework -pip install fastmcp --upgrade
+##azure-ai-agents-1.1.0 - Azure AI Agents SDK -pip install azure-ai-agents --upgrade
+##azure-identity-1.25.0 - Azure authentication - pip install azure-identity --upgrade
 
 # Clear the console
 os.system('cls' if os.name=='nt' else 'clear')
@@ -149,7 +154,7 @@ async def chat_loop(session):
 
     # Delete the agent when done
     print("Cleaning up agents:")
-    agents_client.delete_agent(agent.id)
+    ##agents_client.delete_agent(agent.id)
     print("Deleted inventory agent.")
 
 
