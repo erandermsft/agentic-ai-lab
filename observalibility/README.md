@@ -19,8 +19,8 @@ Before running the evaluations, you'll need:
      AZURE_OPENAI_API_KEY=your_api_key
      AZURE_OPENAI_DEPLOYMENT=your_deployment_name
 
-     # Azure AI Foundry Project Connection String
-     PROJECT_CONNECTION_STRING=your_project_connection_string
+     # Azure AI Foundry Project Endpoint
+     AI_FOUNDRY_PROJECT_ENDPOINT=your_ai_foundry_project_endpoint
      ```
 
 3. **Required Python Packages**:
