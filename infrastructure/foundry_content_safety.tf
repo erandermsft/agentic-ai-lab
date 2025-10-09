@@ -6,5 +6,8 @@ resource "azurerm_cognitive_account" "content_safety" {
   kind                  = "ContentSafety"
 
   sku_name = "S0"
+  identity {
+    type = "SystemAssigned"
+  }
 }
 
