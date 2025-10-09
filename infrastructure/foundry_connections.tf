@@ -71,6 +71,30 @@ resource "azapi_resource" "aoai_connection" {
   }
 }
 
+resource "azapi_resource" "content_understanding_connection" {
+  depends_on = [azapi_resource.aoai_connection]
+  type       = "Microsoft.CognitiveServices/accounts/projects/connections@2025-06-01"
+
+  name      = local.content_understanding_connection_name
+  parent_id = azapi_resource.foundry_project.id
+
+  body = {
+    properties = {
+      category      = "AzureOpenAI"
+      authType      = "ApiKey"
+      isSharedToAll = true
+      metadata = {
+        ApiType    = "Azure"
+        ResourceId = data.azurerm_cognitive_account.content_understanding.id
+        type       = "azure_open_ai"
+      }
+      target = data.azurerm_cognitive_account.content_understanding.id
+      credentials = {
+        key = data.azurerm_cognitive_account.content_understanding.primary_access_key      }
+    }
+  }
+}
+
 resource "azapi_resource" "app_insights_connection" {
   depends_on = [azapi_resource.content_understanding_connection]
   type       = "Microsoft.CognitiveServices/accounts/projects/connections@2025-06-01"
@@ -96,23 +120,15 @@ resource "azapi_resource" "app_insights_connection" {
   }
 }
 
-<<<<<<< HEAD
 resource "azapi_resource" "storage_connection" {
   depends_on = [azapi_resource.app_insights_connection,]
   type       = "Microsoft.CognitiveServices/accounts/projects/connections@2025-06-01"
 
   name      = local.storage_connection_name
-=======
-resource "azapi_resource" "app_insights_connection" {
-  type = "Microsoft.CognitiveServices/accounts/projects/connections@2025-06-01"
-
-  name      = local.app_insights_connection_name
->>>>>>> af94b1c (⛸️ Thu Oct  2 11:11:40 CDT 2025)
   parent_id = azapi_resource.foundry_project.id
 
   body = {
     properties = {
-<<<<<<< HEAD
       category      = "AzureBlob"
       authType      = "ManagedIdentity"
       isSharedToAll = true
@@ -131,21 +147,3 @@ resource "azapi_resource" "app_insights_connection" {
     }
   }
 }
-
-=======
-      category      = "AppInsights"
-      authType      = "ApiKey"
-      isSharedToAll = true
-      metadata = {
-        ApiType    = "Azure"
-        ResourceId = azurerm_application_insights.this.id
-        type       = "azure_app_insights"
-      }
-      target = azurerm_application_insights.this.id 
-      credentials = {
-        key = azurerm_application_insights.this.connection_string
-      }
-    }
-  }
-}
->>>>>>> af94b1c (⛸️ Thu Oct  2 11:11:40 CDT 2025)

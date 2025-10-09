@@ -16,11 +16,9 @@ resource "azapi_resource" "foundry_project" {
           displayName = local.project_name
         }
     }
-<<<<<<< HEAD
 
     response_export_values = ["identity.principalId"]
-=======
->>>>>>> dbdcd93 (🥊 Thu Oct  2 11:05:34 CDT 2025)
+
 }
 
 data "azurerm_monitor_diagnostic_categories" "foundry_project" {

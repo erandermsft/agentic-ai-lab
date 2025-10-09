@@ -16,6 +16,7 @@ locals {
   search_service_name                   = "${local.resource_name}-search"
   openai_name                           = "${local.resource_name}-openai"
   content_understanding_name            = "${local.resource_name}-content-understanding"
+  content_safety_name                   = "${local.resource_name}-content-grounding"
   content_understanding_location        = "westus" # Content Understanding is only available in West US
   bing_ground_connection_name           = "bing-connection"
   ai_search_connection_name             = "search-connection"

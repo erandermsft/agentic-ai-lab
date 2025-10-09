@@ -64,7 +64,6 @@ output "SERVICE_API_FOR_CU" {
   value     = "2025-05-01-preview"
   sensitive = false
 }
-<<<<<<< HEAD
 
 output AZURE_OPENAI_ENDPOINT {
   value     = azurerm_cognitive_account.azure_open_ai.endpoint
@@ -80,5 +79,3 @@ output AZURE_OPENAI_DEPLOYMENT {
   value     = azurerm_cognitive_deployment.gpt_4o.name
   sensitive = false
 }
-=======
->>>>>>> dbdcd93 (🥊 Thu Oct  2 11:05:34 CDT 2025)
