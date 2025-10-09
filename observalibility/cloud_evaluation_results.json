@@ -1,12 +1,8 @@
 {
-  "evaluation_name": "3cf5fc68-d9eb-42aa-b745-bee89ae5a449",
+  "evaluation_name": "013ca890-8a2c-4bd6-b481-10bbc3912d64",
   "status": "NotStarted",
-  "dataset_id": "azureai://accounts/kd-foundry-project-resource/projects/kd-foundry-project/data/health-fitness-eval-1753047588/versions/1.0",
-  "evaluators": [
-    "bleu_score",
-    "relevance",
-    "coherence"
-  ],
   "project_endpoint": "https://kd-foundry-project-resource.services.ai.azure.com/api/projects/kd-foundry-project",
-  "timestamp": 1753047606
+  "dataset_id": "azureai://accounts/kd-foundry-project-resource/projects/kd-foundry-project/data/health-fitness-dataset-1760041552/versions/1.0",
+  "timestamp": 1760041568,
+  "evaluation_id": "013ca890-8a2c-4bd6-b481-10bbc3912d64"
 }
