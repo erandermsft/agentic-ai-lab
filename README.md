@@ -124,6 +124,8 @@ python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foun
    - Connect this resource to your AI Foundry project
       - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Azure OpenAI
 
+<img src="foundry-connection.png" width="75%"/>
+
 4. **Configure an Azure Search Service**
    - Create an Azure AI Search resource in Azure
    - Connect this resource to your AI Foundry project
