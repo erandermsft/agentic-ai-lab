@@ -15,6 +15,7 @@ tasks:
     - task: init
     - task: apply 
     - task: creds
+    - task: venv-up
 
   init:
     dir: ./infrastructure
@@ -53,9 +54,21 @@ tasks:
     cmds:       
     - terraform destroy -var "region={{.REGION}}" -var "tags={{.AIF_BASIC_TITLE}}" -compact-warnings || true
     - rm -rf terraform.tfstate.d .terraform.lock.hcl .terraform terraform.tfstate terraform.tfstate.backup .terraform.tfstate.lock.info || true
+    - task: venv-down
     vars: 
       REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
 
+  venv-up:
+    desc: Initialized python virtual environment
+    cmds:
+    - python -m venv .venv
+    - silent: true 
+      cmd: echo Now copy and paste the following command to activate the virtual environment - source .venv/bin/activate
+
+  venv-down:
+    desc: Cleans up the python virtual environment
+    cmds:
+    - rm -rf .venv
 
   creds:
     dir: ./infrastructure
