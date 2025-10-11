@@ -24,7 +24,7 @@
       "outputs.f1_score.f1_threshold": 0.5,
       "outputs.relevance.relevance": 2.0,
       "outputs.relevance.gpt_relevance": 2.0,
-      "outputs.relevance.relevance_reason": "The response directly answers the query but is overly simplistic and inaccurate by claiming diet sodas are 100% healthy without any nuance or evidence. It lacks any explanation or consideration of potential health concerns, making it misleading and incomplete.",
+      "outputs.relevance.relevance_reason": "The response directly answers the query but is overly simplistic and inaccurate by claiming diet sodas are 100% healthy without any nuance or evidence. It lacks any explanation or consideration of potential health concerns, making it incomplete and misleading.",
       "outputs.relevance.relevance_result": "fail",
       "outputs.relevance.relevance_threshold": 3
     },
@@ -36,9 +36,9 @@
       "outputs.f1_score.f1_score": 0.0,
       "outputs.f1_score.f1_result": "fail",
       "outputs.f1_score.f1_threshold": 0.5,
-      "outputs.relevance.relevance": 2.0,
-      "outputs.relevance.gpt_relevance": 2.0,
-      "outputs.relevance.relevance_reason": "The response directly answers the query by naming a city, but it is factually incorrect. Since the capital of France is Paris, not London, the response is relevant but wrong, making it a poor answer.",
+      "outputs.relevance.relevance": 1.0,
+      "outputs.relevance.gpt_relevance": 1.0,
+      "outputs.relevance.relevance_reason": "The response directly answers the query by naming a city, but it is factually incorrect. Since the capital of France is Paris, not London, the response fails to provide accurate or relevant information.",
       "outputs.relevance.relevance_result": "fail",
       "outputs.relevance.relevance_threshold": 3
     }
@@ -46,8 +46,8 @@
   "metrics": {
     "f1_score.f1_score": 0.18695652173913044,
     "f1_score.f1_threshold": 0.5,
-    "relevance.relevance": 2.3333333333333335,
-    "relevance.gpt_relevance": 2.3333333333333335,
+    "relevance.relevance": 2.0,
+    "relevance.gpt_relevance": 2.0,
     "relevance.relevance_threshold": 3.0,
     "f1_score.binary_aggregate": 0.0,
     "relevance.binary_aggregate": 0.33
