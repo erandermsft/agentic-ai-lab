@@ -143,6 +143,9 @@ python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foun
 7. **Configure Environment Variables**
    - Copy `.env.example` to `.env` in the root directory and update values accordingly
    - This repository expects the `.env` file to be in the root directory, if you want to store it elsewhere or name it something else, update the `load_dotenv()` calls in notebooks
+   - Many of the Environment Variables needed can be found in the Overview tab of your Azure AI Foundry project or the connected resources in the Management Center tab
+   - For example, AZURE_OPENAI variables-
+<img src="env-example.png" width="75%"/>   
 
 ---
 
@@ -247,7 +250,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 |----------|-------------|
 | 🔤 [AI Language Service Lab](ai-language/README.md) | Low-code Logic Apps for PII removal, language detection, and translation. Build workflow solutions for processing multilingual customer feedback with privacy compliance and centralized analytics. |
 
-### 👁️ Phase 12: AI Vision Services with Low-Code Solutions  
+### 👁️ Phase 11: AI Vision Services with Low-Code Solutions  
 **Location:** `ai-vision/`
 
 | Implementation | Description |
@@ -255,7 +258,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 👀 [AI Vision Lab Guide](ai-vision/README.md) | Azure AI Vision low-code exercises including OCR, face detection, image analysis, and video indexing using Vision Studio |
 | 📓 [AI Vision Services Notebook](ai-vision/LabFiles/AI_vision_services_lab.ipynb) | Hands-on Jupyter notebook for computer vision capabilities |
 
-### 📄 Phase 13: Content Understanding & Document Classification
+### 📄 Phase 12: Content Understanding & Document Classification
 **Location:** `content-understanding/`
 
 | Implementation | Description |
@@ -265,7 +268,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 🐍 [Content Understanding Client](content-understanding/content_understanding_client.py) | Python client implementation for Azure AI Content Understanding API |
 | 📋 [Sample Data](content-understanding/Data/) | Sample PDF documents for testing classification and extraction workflows |
 
-### 🛡️ Phase 14: Responsible AI & Content Safety
+### 🛡️ Phase 13: Responsible AI & Content Safety
 **Location:** `responsible-ai/`
 
 | Implementation | Description |
