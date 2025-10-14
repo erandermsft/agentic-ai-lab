@@ -75,17 +75,7 @@ python --version  # Should be 3.10 or higher
 
 ### Step 2: Python Environment Configuration
 
-**Option A: Using UV (Recommended - Fastest)**
-```powershell
-# Install UV package manager for Windows PowerShell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# Create and activate virtual environment
-uv venv
-.\.venv\Scripts\Activate.ps1
-```
-
-**Option B: Using Standard venv**
+**Using Standard venv**
 ```powershell
 # Create and activate virtual environment
 python -m venv .venv
@@ -97,9 +87,6 @@ python -m venv .venv
 ```powershell
 # Install core dependencies
 pip install -r requirements.txt
-
-# Register Jupyter kernel
-python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foundry Lab"
 ```
 
 ### Step 4: Azure AI Foundry Setup
