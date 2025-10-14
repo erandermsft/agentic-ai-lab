@@ -74,21 +74,35 @@ tasks:
     dir: ./infrastructure
     cmds:  
     - silent: true
-      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"PROJECT_CONNECTION_STRING=" + .PROJECT_CONNECTION_STRING.value'  > ../.env &
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_PROJECT_ENDPOINT=" + .AZURE_AI_PROJECT_ENDPOINT.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"MODEL_DEPLOYMENT_NAME=" + .MODEL_DEPLOYMENT_NAME.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"EMBEDDING_MODEL_DEPLOYMENT_NAME=" + .EMBEDDING_MODEL_DEPLOYMENT_NAME.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"TENANT_ID=" + .TENANT_ID.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_SUBSCRIPTION_ID=" + .AZURE_SUBSCRIPTION_ID.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"GROUNDING_WITH_BING_CONNECTION_NAME=" + .GROUNDING_WITH_BING_CONNECTION_NAME.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_ENDPOINT= "+ .AZURE_AI_SEARCH_ENDPOINT.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_API_KEY=" + .AZURE_AI_SEARCH_API_KEY.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"SERVICE_FOR_CU=" + .SERVICE_FOR_CU.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"SERVICE_API_FOR_CU=" + .SERVICE_API_FOR_CU.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"SAMPLE_CLAIMS_BUNDLE=" + .SAMPLE_CLAIMS_BUNDLE.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_ENDPOINT=" + .AZURE_OPENAI_ENDPOINT.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_API_KEY=" + .AZURE_OPENAI_API_KEY.value' >> ../.env & 
-            echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_DEPLOYMENT=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env
+      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"PROJECT_CONNECTION_STRING=" + .PROJECT_CONNECTION_STRING.value'  > ../.env 
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_PROJECT_ENDPOINT=" + .AZURE_AI_PROJECT_ENDPOINT.value' >> ../.env 
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"MODEL_DEPLOYMENT_NAME=" + .MODEL_DEPLOYMENT_NAME.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"EMBEDDING_MODEL_DEPLOYMENT_NAME=" + .EMBEDDING_MODEL_DEPLOYMENT_NAME.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"TENANT_ID=" + .TENANT_ID.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_SUBSCRIPTION_ID=" + .AZURE_SUBSCRIPTION_ID.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"GROUNDING_WITH_BING_CONNECTION_NAME=" + .GROUNDING_WITH_BING_CONNECTION_NAME.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_ENDPOINT= "+ .AZURE_AI_SEARCH_ENDPOINT.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_API_KEY=" + .AZURE_AI_SEARCH_API_KEY.value' >> ../.env 
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"SERVICE_FOR_CU=" + .SERVICE_FOR_CU.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"SERVICE_API_FOR_CU=" + .SERVICE_API_FOR_CU.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"SAMPLE_CLAIMS_BUNDLE=" + .SAMPLE_CLAIMS_BUNDLE.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_ENDPOINT=" + .AZURE_OPENAI_ENDPOINT.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_API_KEY=" + .AZURE_OPENAI_API_KEY.value' >> ../.env 
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_DEPLOYMENT=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env
     vars:
       TF_OUTPUT: 
         sh: terraform output -json
