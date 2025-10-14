@@ -62,6 +62,7 @@ tasks:
     desc: Initialized python virtual environment
     cmds:
     - python -m venv .venv
+    - pip install "agent-framework[viz]" --pre 
     - silent: true 
       cmd: echo Now copy and paste the following command to activate the virtual environment - source .venv/bin/activate
 
@@ -100,9 +101,11 @@ tasks:
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_ENDPOINT=" + .AZURE_OPENAI_ENDPOINT.value' >> ../.env
     - silent: true
-      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_API_KEY=" + .AZURE_OPENAI_API_KEY.value' >> ../.env 
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_API_KEY=" + .AZURE_OPENAI_API_KEY.value' >> ../.env       
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_DEPLOYMENT=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env      
     vars:
       TF_OUTPUT: 
         sh: terraform output -json
