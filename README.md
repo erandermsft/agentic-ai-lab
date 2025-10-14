@@ -21,7 +21,7 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 1. Setup, Authentication, Quick Start
 2. Prompting, Embeddings, RAG, Phi-4, DeepSeek
 3. Agents – File Search, Bing, Azure Functions
-4. Multi-Agent Orchestration + Tracing
+4. Multi-Agent Orchestration
 5. Model Context Protocol (MCP) with Agents
 6. AI Red Teaming & Security Testing
 7. Agent Framework – Advanced Agent Development
