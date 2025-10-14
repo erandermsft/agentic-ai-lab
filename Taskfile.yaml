@@ -74,7 +74,7 @@ tasks:
     dir: ./infrastructure
     cmds:  
     - silent: true
-      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"PROJECT_CONNECTION_STRING=" + .PROJECT_CONNECTION_STRING.value'  > ../.env 
+      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"AI_FOUNDRY_PROJECT_ENDPOINT =" + .PROJECT_CONNECTION_STRING.value'  > ../.env 
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_PROJECT_ENDPOINT=" + .AZURE_AI_PROJECT_ENDPOINT.value' >> ../.env 
     - silent: true
