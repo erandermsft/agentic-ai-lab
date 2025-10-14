@@ -52,11 +52,20 @@ tasks:
     dir: ./infrastructure
     desc: Destroys all Azure resources and cleans up Terraform
     cmds:       
+    - docker stop aspire-dashboard || true
     - terraform destroy -var "region={{.REGION}}" -var "tags={{.AIF_BASIC_TITLE}}" -compact-warnings || true
     - rm -rf terraform.tfstate.d .terraform.lock.hcl .terraform terraform.tfstate terraform.tfstate.backup .terraform.tfstate.lock.info || true
     - task: venv-down
     vars: 
       REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
+
+  otel:
+    desc: Starts up .net Aspire for OTEL endpoint 
+    cmds:
+    - docker run --rm -p 18888:18888 -p 4317:18889 -d --name aspire-dashboard mcr.microsoft.com/dotnet/aspire-dashboard:latest > /dev/null 2>&1 || true
+    - docker ps -f name=aspire-dashboard
+    - cmd: echo $(docker logs aspire-dashboard | grep -i Login)
+      silent: true 
 
   venv-up:
     desc: Initialized python virtual environment
