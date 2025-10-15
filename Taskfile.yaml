@@ -1,7 +1,7 @@
 version: '3'
 
 env:
-  AIF_BASIC_TITLE: "AI Foundry - End to End Workshop"
+  WORKSHOP_TITLE: "AI Foundry - End to End Workshop"
   DEFAULT_REGION: eastus2
 
 tasks:
@@ -10,7 +10,7 @@ tasks:
     - task --list 
   
   up: 
-    desc: Builds a Complete {{.AIF_BASIC_TITLE}} Environment
+    desc: Builds a Complete {{.WORKSHOP_TITLE}} Environment
     cmds:
     - task: init
     - task: apply 
@@ -33,7 +33,7 @@ tasks:
     cmds:
     - terraform apply -auto-approve
       -var "region={{.REGION}}" 
-      -var "tags={{.AIF_BASIC_TITLE}}"
+      -var "tags={{.WORKSHOP_TITLE}}"
       -compact-warnings
     vars: 
       REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
@@ -43,7 +43,7 @@ tasks:
     cmds:
     - terraform refresh
       -var "region={{.REGION}}" 
-      -var "tags={{.AIF_BASIC_TITLE}}"
+      -var "tags={{.WORKSHOP_TITLE}}"
       -compact-warnings
     vars: 
       REGION: '{{default .DEFAULT_REGION .CLI_ARGS}}'
@@ -53,7 +53,7 @@ tasks:
     desc: Destroys all Azure resources and cleans up Terraform
     cmds:       
     - docker stop aspire-dashboard || true
-    - terraform destroy -var "region={{.REGION}}" -var "tags={{.AIF_BASIC_TITLE}}" -compact-warnings || true
+    - terraform destroy -var "region={{.REGION}}" -var "tags={{.WORKSHOP_TITLE}}" -compact-warnings || true
     - rm -rf terraform.tfstate.d .terraform.lock.hcl .terraform terraform.tfstate terraform.tfstate.backup .terraform.tfstate.lock.info || true
     - task: venv-down
     vars: 
@@ -73,8 +73,9 @@ tasks:
     - python -m venv .venv
     - pip install "agent-framework[viz]" --pre 
     - silent: true 
-      cmd: echo Now copy and paste the following command to activate the virtual environment - source .venv/bin/activate
-
+      cmd: echo -e '\t🔹\033[1m\e[38;5;45mNow copy and paste the following command to activate the virtual environment:' &&
+           echo -e '\t➡️\033[1m\e[38;5;45msource .venv/bin/activate'
+      
   venv-down:
     desc: Cleans up the python virtual environment
     cmds:
@@ -82,9 +83,10 @@ tasks:
 
   creds:
     dir: ./infrastructure
+    desc: Sets up the .env file for the projects
     cmds:  
     - silent: true
-      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"AI_FOUNDRY_PROJECT_ENDPOINT =" + .PROJECT_CONNECTION_STRING.value'  > ../.env 
+      cmd:  echo '{{.TF_OUTPUT}}' | jq -r '"AI_FOUNDRY_PROJECT_ENDPOINT=" + .PROJECT_CONNECTION_STRING.value'  > ../.env 
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_PROJECT_ENDPOINT=" + .AZURE_AI_PROJECT_ENDPOINT.value' >> ../.env 
     - silent: true
@@ -98,7 +100,7 @@ tasks:
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"GROUNDING_WITH_BING_CONNECTION_NAME=" + .GROUNDING_WITH_BING_CONNECTION_NAME.value' >> ../.env
     - silent: true
-      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_ENDPOINT= "+ .AZURE_AI_SEARCH_ENDPOINT.value' >> ../.env
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_ENDPOINT=" + .AZURE_AI_SEARCH_ENDPOINT.value' >> ../.env
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_SEARCH_API_KEY=" + .AZURE_AI_SEARCH_API_KEY.value' >> ../.env 
     - silent: true
@@ -115,6 +117,11 @@ tasks:
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_DEPLOYMENT=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env
     - silent: true
       cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env      
+    - silent: true
+      cmd: echo '{{.TF_OUTPUT}}' | jq -r '"AZURE_AI_MODEL_DEPLOYMENT_NAME=" + .AZURE_OPENAI_DEPLOYMENT.value' >> ../.env      
+    - silent: true
+      cmd: echo -e '\t🔹\033[1m\e[38;5;45m Now copy and paste the following command to source the variables:' &&
+           echo -e '\t➡️\033[1m\e[38;5;45m `source ../.env`'
     vars:
       TF_OUTPUT: 
         sh: terraform output -json
