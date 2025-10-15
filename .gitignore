@@ -72,10 +72,6 @@ target/
 # pyenv
 .python-version
 
-# virtualenv
-venv/
-ENV/
-
 .env
 
 .vscode/
