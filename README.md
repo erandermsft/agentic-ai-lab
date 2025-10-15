@@ -20,17 +20,16 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 
 1. Setup, Authentication, Quick Start
 2. Prompting, Embeddings, RAG, Phi-4, DeepSeek
-3. Agents – File Search, Bing, Azure Functions
-4. Multi-Agent Orchestration + Tracing
-5. Model Context Protocol (MCP) with Agents
-6. AI Red Teaming & Security Testing
-7. Agent Framework – Advanced Agent Development
-8. Frameworks – AutoGen, Semantic Kernel
-9. Observability & Evaluation
-10. AI Language Services with Low-Code Workflows
-11. AI Vision with Low-Code Solutions
-12. Content Understanding & Document Classification
-13. Responsible AI & Content Safety
+3. Agents – File Search, Bing, Azure Functions, Multi-Agent
+4. Model Context Protocol (MCP) with Agents
+5. AI Red Teaming & Security Testing
+6. Agent Framework – Advanced Agent Development
+7. Frameworks – AutoGen, Semantic Kernel
+8. Observability & Evaluation
+9. AI Language Services with Low-Code Workflows
+10. AI Vision with Low-Code Solutions
+11. Content Understanding & Document Classification
+12. Responsible AI & Content Safety
 
 
 > **🎓 Laboratory Format**: One day intensive hands-on experience  
@@ -45,8 +44,7 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 ai-foundry-e2e-lab/
 ├── 📚 initial-setup/           # Start here - Authentication & environment setup
 ├── 💬 chat-rag/               # Chat completion and RAG fundamentals
-├── 🤖 agents/                 # AI Agents development and tools
-├── 🔄 multi-agent/            # Multi-agent systems and orchestration
+├── 🤖 agents/                 # AI Agents development and tools (includes multi-agent)
 ├── 🔌 agents-with-mcp/        # Model Context Protocol (MCP) integration
 ├── 🔴 ai-red-teaming-agent/   # AI Red Teaming and Security Testing
 ├── 🤖⚙️ agent-framework/        # Microsoft Agent Framework for advanced agent development
@@ -75,17 +73,7 @@ python --version  # Should be 3.10 or higher
 
 ### Step 2: Python Environment Configuration
 
-**Option A: Using UV (Recommended - Fastest)**
-```powershell
-# Install UV package manager for Windows PowerShell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# Create and activate virtual environment
-uv venv
-.\.venv\Scripts\Activate.ps1
-```
-
-**Option B: Using Standard venv**
+**Using Standard venv**
 ```powershell
 # Create and activate virtual environment
 python -m venv .venv
@@ -97,9 +85,6 @@ python -m venv .venv
 ```powershell
 # Install core dependencies
 pip install -r requirements.txt
-
-# Register Jupyter kernel
-python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foundry Lab"
 ```
 
 ### Step 4: Azure AI Foundry Setup
@@ -124,6 +109,8 @@ python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foun
    - Connect this resource to your AI Foundry project
       - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Azure OpenAI
 
+<img src="foundry-connection.png" width="75%"/>
+
 4. **Configure an Azure Search Service**
    - Create an Azure AI Search resource in Azure
    - Connect this resource to your AI Foundry project
@@ -141,6 +128,9 @@ python -m ipykernel install --user --name=ai-foundry-lab --display-name="AI Foun
 7. **Configure Environment Variables**
    - Copy `.env.example` to `.env` in the root directory and update values accordingly
    - This repository expects the `.env` file to be in the root directory, if you want to store it elsewhere or name it something else, update the `load_dotenv()` calls in notebooks
+   - Many of the Environment Variables needed can be found in the Overview tab of your Azure AI Foundry project or the connected resources in the Management Center tab
+   - For example, AZURE_OPENAI variables-
+<img src="env-example.png" width="75%"/>   
 
 ---
 
@@ -179,30 +169,23 @@ Follow this structured learning path to master Azure AI Foundry:
 | 🌐 [Bing Grounding](agents/4-bing_grounding.ipynb) | Web search integration |
 | 🔍 [Agents + AI Search](agents/5-agents-aisearch.ipynb) | Enterprise search integration |
 | ⚡ [Agents + Azure Functions](agents/6-agents-az-functions.ipynb) | Serverless integration |
+| 👥 [Multi-Agent Solution](agents/multi-agent-solution.ipynb) | Collaborative AI systems |
 
-### 🔄 Phase 4: Multi-Agent Systems
-**Location:** `multi-agent/`
-
-| Notebook | Description |
-|----------|-------------|
-| 👥 [Multi-Agent Solution](multi-agent/multi-agent-solution.ipynb) | Collaborative AI systems |
-| 📊 [Multi-Agent with Tracing](multi-agent/multi-agent-solution-with-tracing.ipynb) | Advanced monitoring |
-
-### 🔌 Phase 5: Model Context Protocol (MCP) Integration
+### 🔌 Phase 4: Model Context Protocol (MCP) Integration
 **Location:** `agents-with-mcp/`
 
 | Implementation | Description |
 |----------|-------------|
 | 🔌 [MCP Inventory Agent](agents-with-mcp/README.md) | Complete working implementation of agents that connect to MCP servers for dynamic tool discovery. Features an intelligent inventory management agent for a cosmetics retailer with automated restock and clearance recommendations. Includes both client and server implementations with interactive chat interface. |
 
-### 🔴 Phase 6: AI Red Teaming & Security Testing
+### 🔴 Phase 5: AI Red Teaming & Security Testing
 **Location:** `ai-red-teaming-agent/`
 
 | Implementation | Description |
 |----------|-------------|
 | 🔴 [AI Red Teaming Agent](ai-red-teaming-agent/README.md) | Advanced AI security testing and vulnerability assessment using red teaming methodologies. Features automated adversarial prompt generation, safety evaluation, and comprehensive security analysis of AI systems. |
 
-### 🤖⚙️ Phase 7: Microsoft Agent Framework
+### 🤖⚙️ Phase 6: Microsoft Agent Framework
 **Location:** `agent-framework/`
 
 The **Microsoft Agent Framework** is an open-source development kit that unifies and extends Semantic Kernel and AutoGen into the next-generation foundation for AI agent development. Built by the same teams, it offers two primary capabilities: **AI Agents** for autonomous decision-making with tool integration and conversation management, and **Workflows** for orchestrating complex multi-agent processes with type safety and checkpointing. Currently in public preview, it combines AutoGen's simple abstractions with Semantic Kernel's enterprise features while adding robust workflow capabilities.
@@ -221,7 +204,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 🌐 [Bing Grounding](agent-framework/azure_ai_with_bing_grounding.ipynb) | Web search integration using Bing Grounding |
 | 🔌 [MCP Integration](agent-framework/azure_ai_with_mcp.ipynb) | Model Context Protocol (MCP) tool integration |
 
-### 🏗️ Phase 8: Semantic Kernel + AutoGen
+### 🏗️ Phase 7: Semantic Kernel + AutoGen
 **Location:** `sk-and-autogen/`
 
 | Notebook | Description |
@@ -230,7 +213,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 🤖 [AutoGen Multi-Agent RAG](sk-and-autogen/2-autogen-multi-agent-rag.ipynb) | Automated agent generation |
 | ❤️ [AutoGen Personalized Analytics](sk-and-autogen/3-autogen-personalized-heart-rate.ipynb) | Health domain specialization |
 
-### 📊 Phase 9: Quality & Operations
+### 📊 Phase 8: Quality & Operations
 **Location:** `observalibility/`
 
 | Notebook | Description |
@@ -238,14 +221,14 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 👁️ [Observability](observalibility/1-Observability.ipynb) | Monitoring and telemetry |
 | 📈 [Evaluation](observalibility/2-evaluation.ipynb) | Quality assessment and benchmarking |
 
-### 🗣️ Phase 10: AI Language Services with Low-Code Workflows
+### 🗣️ Phase 9: AI Language Services with Low-Code Workflows
 **Location:** `ai-language/`
 
 | Implementation | Description |
 |----------|-------------|
 | 🔤 [AI Language Service Lab](ai-language/README.md) | Low-code Logic Apps for PII removal, language detection, and translation. Build workflow solutions for processing multilingual customer feedback with privacy compliance and centralized analytics. |
 
-### 👁️ Phase 12: AI Vision Services with Low-Code Solutions  
+### 👁️ Phase 10: AI Vision Services with Low-Code Solutions  
 **Location:** `ai-vision/`
 
 | Implementation | Description |
@@ -253,7 +236,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 👀 [AI Vision Lab Guide](ai-vision/README.md) | Azure AI Vision low-code exercises including OCR, face detection, image analysis, and video indexing using Vision Studio |
 | 📓 [AI Vision Services Notebook](ai-vision/LabFiles/AI_vision_services_lab.ipynb) | Hands-on Jupyter notebook for computer vision capabilities |
 
-### 📄 Phase 13: Content Understanding & Document Classification
+### 📄 Phase 11: Content Understanding & Document Classification
 **Location:** `content-understanding/`
 
 | Implementation | Description |
@@ -263,7 +246,7 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 🐍 [Content Understanding Client](content-understanding/content_understanding_client.py) | Python client implementation for Azure AI Content Understanding API |
 | 📋 [Sample Data](content-understanding/Data/) | Sample PDF documents for testing classification and extraction workflows |
 
-### 🛡️ Phase 14: Responsible AI & Content Safety
+### 🛡️ Phase 12: Responsible AI & Content Safety
 **Location:** `responsible-ai/`
 
 | Implementation | Description |
