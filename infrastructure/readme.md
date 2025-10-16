@@ -153,4 +153,4 @@ __Note__: This is optional if you need to re-create the virtual python environme
 ![azure resources](./azure-resources.png)
 
 # Navigation
-‖ [Return to Main Index 🏠](./infrastructure.md#setup-and-deployment) ‖ 
+‖ [Return to Main README 🏠](../README.md) ‖ 
