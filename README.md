@@ -10,7 +10,7 @@
 
 ---
 
-🎯 [Getting Started](#-getting-started) • 📚 [Learning Path](#-learning-path) • 🔧 [Setup Guide](#-environment-setup) • 🛠️ [Troubleshooting](#-troubleshooting--support)
+🎯 [Getting Started](#-getting-started) • 📚 [Learning Path](#-learning-path) • 🔧 [Setup Guide](./docs/infrastructure.md) • 🛠️ [Troubleshooting](#-troubleshooting--support)
 
 ---
 
@@ -57,9 +57,10 @@ ai-foundry-e2e-lab/
 ```
 
 ---
+## 🚀 Getting Started - Semi-Automated Steps
+* [Automated Setup with Terraform](./docs/infrastructure.md)
 
-## 🚀 Getting Started
-
+## 🚀 Getting Started - Manual Steps
 ### Step 1: Repository Setup
 
 ```powershell
