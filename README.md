@@ -57,7 +57,7 @@ ai-foundry-e2e-lab/
 ```
 
 ---
-## 🚀 Getting Started - Manual Steps
+## 🚀 Getting Started
 ### Step 1: Repository Setup
 
 ```powershell
