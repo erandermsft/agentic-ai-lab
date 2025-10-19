@@ -19,7 +19,7 @@
 This comprehensive laboratory transforms you from an AI enthusiast into an Azure AI Foundry expert. Through progressive, hands-on modules, you'll master:
 
 1. Setup, Authentication, Quick Start
-2. Prompting, Embeddings, RAG, Phi-4, DeepSeek
+2. Prompting, Embeddings, RAG
 3. Agents – File Search, Bing, Azure Functions, Multi-Agent
 4. Model Context Protocol (MCP) with Agents
 5. AI Red Teaming & Security Testing
@@ -98,9 +98,6 @@ pip install -r requirements.txt
    |------------|-------------------|---------|
    | **Chat/Completion** | `gpt-4o`, `gpt-4o-mini` | Primary reasoning & conversation |
    | **Text Embeddings** | `text-embedding-3-large` | Vector search & RAG |
-   | **(Optional) Image Embeddings** | `cohere-embed-v3-english` | Image search & multimodal tasks |
-   | **Image Generation** | `dall-e-3` | Image creation from text |
-   | **Specialized** | `phi-4`, `deepseek-r1` | Domain-specific tasks |
 
 3. **Configure an Azure OpenAI Resource**
    - Create an Azure OpenAI resource in the same region as your AI Foundry project
@@ -153,8 +150,6 @@ Follow this structured learning path to master Azure AI Foundry:
 | 💬 [Basic Chat Completion](chat-rag/1-basic-chat-completion.ipynb) | Foundation models and prompting |
 | 🔍 [Embeddings](chat-rag/2-embeddings.ipynb) | Vector representations and similarity |
 | 📚 [Basic RAG](chat-rag/3-basic-rag.ipynb) | Retrieval-Augmented Generation |
-| 🧠 [Phi-4](chat-rag/4-phi-4.ipynb) | Microsoft's reasoning model |
-| 🤖 [DeepSeek R1](chat-rag/5-deep-seek-r1.ipynb) | Advanced reasoning capabilities |
 
 ### 🤖 Phase 3: AI Agents Development  
 **Location:** `agents/`
