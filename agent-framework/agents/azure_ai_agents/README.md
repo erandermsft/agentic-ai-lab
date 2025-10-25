@@ -56,7 +56,6 @@ This folder contains examples demonstrating different ways to create and use age
 
 ### Advanced Features
 - **`azure_ai_with_bing_grounding.ipynb`** - Web search integration using Bing Grounding
-- **`azure_ai_with_mcp.ipynb`** - Model Context Protocol (MCP) tool integration
 
 ## 🚀 Getting Started
 
@@ -145,7 +144,6 @@ This folder contains examples demonstrating different ways to create and use age
 ### Advanced
 1. Integrate web search with `azure_ai_with_bing_grounding.ipynb`
 2. Execute code dynamically with `azure_ai_with_code_interpreter.ipynb`
-3. Explore MCP integration with `azure_ai_with_mcp.ipynb`
 
 ## 🔧 Key Features Demonstrated
 

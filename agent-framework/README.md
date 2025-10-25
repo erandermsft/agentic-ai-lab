@@ -42,7 +42,17 @@ This folder contains comprehensive examples for the Microsoft Agent Framework, o
 ## 📂 Folder Structure
 
 ### 🤖 **[agents/azure_ai_agents/](agents/azure_ai_agents/)** - Azure AI Agent Examples
-Core agent development patterns using Azure AI services. These notebooks demonstrate single-agent capabilities with various tools and integrations.
+Core agent development patterns using Azure AI services. These notebooks demonstrate single-agent capabilities with various tools and integrations including function tools, code interpreter, file search,and Bing grounding.
+
+📖 **[View Azure AI Agents Documentation](agents/azure_ai_agents/README.md)** - Detailed guide for all agent examples
+
+### 🔌 **[agents/mcp/](agents/mcp/)** - Model Context Protocol Examples
+Examples demonstrating MCP (Model Context Protocol) integration with Agent Framework:
+- Exposing agents as MCP servers
+- API key authentication patterns
+- Connecting AI applications to tools and data sources
+
+📖 **[View MCP Documentation](agents/mcp/README.md)** - MCP integration guide
 
 ### 🔄 **[workflows/](workflows/)** - Multi-Agent Workflows & Orchestration
 Graph-based workflow examples showing how to connect multiple agents and functions for complex tasks. Includes patterns for:
@@ -53,6 +63,16 @@ Graph-based workflow examples showing how to connect multiple agents and functio
 - Magentic multi-agent coordination
 
 📖 **[View Workflows Documentation](workflows/README.md)** - Comprehensive guide with 40+ workflow samples
+
+### 🛡️ **[middleware/](middleware/)** - Middleware Patterns & Interceptors
+Interactive notebooks demonstrating middleware patterns for agent execution interception:
+- Agent, function, and chat middleware
+- Security validation and logging
+- Exception handling and retry logic
+- Result transformation and streaming support
+- Shared state management
+
+📖 **[View Middleware Documentation](middleware/README.md)** - Complete middleware guide with 9 notebooks
 
 ### 🎨 **[devui/](devui/)** - Development UI & Testing
 Sample agents and workflows designed for interactive testing with the Agent Framework DevUI - a lightweight web interface for agent development.
@@ -78,9 +98,36 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 
 ### Advanced Features
 - **`azure_ai_with_bing_grounding.ipynb`** - Web search integration using Bing Grounding
-- **`azure_ai_with_mcp.ipynb`** - Model Context Protocol (MCP) tool integration
 
 📖 **[View Azure AI Agents Documentation](agents/azure_ai_agents/README.md)** - Detailed guide for all agent examples
+
+---
+
+## 🔌 Available Examples in agents/mcp/
+
+### MCP Integration Patterns
+- **`azure_ai_with_mcp.ipynb`** - Using hosted MCP tools with Azure AI Foundry agents (basic, multi-tool, and thread-based examples)
+- **`agent_as_mcp_server.py`** - Expose an Agent Framework agent as an MCP server
+- **`mcp_api_key_auth.py`** - API key authentication with MCP servers
+
+📖 **[View MCP Documentation](agents/mcp/README.md)** - Complete MCP integration guide
+
+---
+
+## �️ Available Notebooks in middleware/
+
+### Middleware Patterns (9 Interactive Notebooks)
+- **`1-agent_and_run_level_middleware.ipynb`** - Agent-level vs run-level middleware
+- **`2-function_based_middleware.ipynb`** - Function-based middleware patterns
+- **`3-class_based_middleware.ipynb`** - Class-based middleware with inheritance
+- **`4-decorator_middleware.ipynb`** - Decorator-based middleware (@agent_middleware, @function_middleware)
+- **`5-chat_middleware.ipynb`** - Chat middleware for message interception
+- **`6-exception_handling_with_middleware.ipynb`** - Exception handling patterns
+- **`7-middleware_termination.ipynb`** - Early termination patterns
+- **`8-override_result_with_middleware.ipynb`** - Result override for streaming/non-streaming
+- **`9-shared_state_middleware.ipynb`** - Shared state with middleware containers
+
+📖 **[View Middleware Documentation](middleware/README.md)** - Complete middleware guide
 
 ---
 
@@ -193,20 +240,40 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 
 ## 📖 Learning Path
 
-### Beginner (agents/azure_ai_agents/)
-1. Start with `azure_ai_basic.ipynb` to understand fundamental concepts
-2. Try `azure_ai_with_explicit_settings.ipynb` for configuration patterns
-3. Explore `azure_ai_with_function_tools.ipynb` for tool integration
+### Beginner
+**Start with Azure AI Agents (agents/azure_ai_agents/)**
+1. `azure_ai_basic.ipynb` - Understand fundamental concepts
+2. `azure_ai_with_explicit_settings.ipynb` - Configuration patterns
+3. `azure_ai_with_function_tools.ipynb` - Tool integration basics
 
-### Intermediate (agents/azure_ai_agents/)
-1. Learn agent persistence with `azure_ai_with_existing_agent.ipynb`
-2. Master conversation management with `azure_ai_with_existing_thread.ipynb`
-3. Implement document search with `azure_ai_with_file_search.ipynb`
+### Intermediate
+**Explore Advanced Agent Features**
+1. `azure_ai_with_existing_agent.ipynb` - Agent persistence (agents/azure_ai_agents/)
+2. `azure_ai_with_existing_thread.ipynb` - Conversation management (agents/azure_ai_agents/)
+3. `azure_ai_with_file_search.ipynb` - Document search (agents/azure_ai_agents/)
+4. **Middleware Basics (middleware/)**:
+   - `1-agent_and_run_level_middleware.ipynb` - Middleware fundamentals
+   - `2-function_based_middleware.ipynb` - Function-based patterns
+   - `3-class_based_middleware.ipynb` - Class-based patterns
 
-### Advanced (agents/azure_ai_agents/)
-1. Integrate web search with `azure_ai_with_bing_grounding.ipynb`
-2. Execute code dynamically with `azure_ai_with_code_interpreter.ipynb`
-3. Explore MCP integration with `azure_ai_with_mcp.ipynb`
+### Advanced
+**Master Complex Patterns**
+1. **MCP Integration (agents/mcp/)**:
+   - `azure_ai_with_mcp.ipynb` - Hosted MCP tools with Azure AI Foundry
+   - `agent_as_mcp_server.py` - Expose agents as MCP servers
+2. **Advanced Middleware (middleware/)**:
+   - `6-exception_handling_with_middleware.ipynb` - Exception handling
+   - `7-middleware_termination.ipynb` - Termination patterns
+   - `8-override_result_with_middleware.ipynb` - Result override with streaming
+3. **Web Integration (agents/azure_ai_agents/)**:
+   - `azure_ai_with_bing_grounding.ipynb` - Web search integration
+   - `azure_ai_with_code_interpreter.ipynb` - Code execution
+
+### Expert
+**Multi-Agent Systems & Workflows**
+1. Explore **workflows/** folder for orchestration patterns
+2. Use **devui/** for interactive testing and development
+3. Combine agents, middleware, and MCP for production systems
 
 ## 🔧 Key Features Demonstrated
 
@@ -215,6 +282,7 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 - ✅ Authentication patterns with Azure CLI
 - ✅ Environment configuration and best practices
 - ✅ Error handling and resource cleanup
+- ✅ Middleware interception and modification
 
 ### Tool Integration
 - ✅ Function tools for custom capabilities
@@ -222,6 +290,7 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 - ✅ File search for document-based Q&A
 - ✅ Web search with Bing integration
 - ✅ External API integration via OpenAPI
+- ✅ MCP (Model Context Protocol) servers
 
 ### Advanced Patterns
 - ✅ Multi-turn conversations
@@ -229,6 +298,10 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 - ✅ Agent reuse patterns
 - ✅ Tool combination strategies
 - ✅ User approval workflows
+- ✅ Middleware security and validation
+- ✅ Exception handling with middleware
+- ✅ Result transformation and streaming
+- ✅ Agent-to-MCP server exposure
 
 ## 💡 Tips for Success
 
@@ -322,10 +395,16 @@ Starts server at http://localhost:8080 with all samples
 ### Phase 1: Single Agents (agents/azure_ai_agents/)
 Start with the Azure AI agent notebooks to master individual agent patterns, tool integration, and Azure AI services.
 
-### Phase 2: Multi-Agent Workflows (workflows/)
+### Phase 2: MCP Integration (agents/mcp/)
+Learn how to connect agents to external tools and data sources using Model Context Protocol, and expose your agents as MCP servers.
+
+### Phase 3: Middleware Patterns (middleware/)
+Master execution interception with middleware for security, logging, exception handling, and result transformation across 9 interactive notebooks.
+
+### Phase 4: Multi-Agent Workflows (workflows/)
 Progress to the workflows folder to learn orchestration, state management, and complex multi-agent coordination.
 
-### Phase 3: Interactive Development (devui/)
+### Phase 5: Interactive Development (devui/)
 Use DevUI to experiment with your agents and workflows in a visual, interactive environment.
 
 ---
