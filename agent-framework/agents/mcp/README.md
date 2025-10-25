@@ -63,22 +63,100 @@ The **`azure_ai_with_mcp.ipynb`** notebook provides comprehensive examples of in
 
 ### Agent as MCP Server
 
+**`agent_as_mcp_server.py`** - Expose an Azure AI Foundry agent as an MCP server that other AI applications can connect to.
+
+**Features:**
+- ✅ Uses Azure AI Foundry agents service
+- ✅ Restaurant menu agent with function tools (`get_specials`, `get_item_price`)
+- ✅ Exposes agent as MCP server for external applications
+- ✅ Azure CLI authentication
+
 **Prerequisites:**
-- `OPENAI_API_KEY` environment variable
-- `OPENAI_RESPONSES_MODEL_ID` environment variable
+- `AZURE_AI_PROJECT_ENDPOINT` environment variable
+- `AZURE_AI_MODEL_DEPLOYMENT_NAME` environment variable
+- Azure CLI authentication (`az login`)
+- .env file in `agents/azure_ai_agents/` directory
+
+**Usage:**
+Configure your MCP client (Claude Desktop, VSCode, etc.) to connect to this server:
+```json
+{
+    "servers": {
+        "agent-framework": {
+            "command": "python",
+            "args": ["agent_as_mcp_server.py"],
+            "env": {
+                "AZURE_AI_PROJECT_ENDPOINT": "<your-endpoint>",
+                "AZURE_AI_MODEL_DEPLOYMENT_NAME": "<your-model>"
+            }
+        }
+    }
+}
+```
+
+### MCP API Key Authentication
+
+**`mcp_api_key_auth.py`** - Demonstrates API key authentication with MCP servers using Azure AI Foundry agents.
+
+**Features:**
+- ✅ Uses Azure AI Foundry agents service
+- ✅ HostedMCPTool with authentication headers
+- ✅ Bearer token and custom header patterns
+- ✅ Azure CLI authentication
+
+**Prerequisites:**
+- `AZURE_AI_PROJECT_ENDPOINT` environment variable
+- `AZURE_AI_MODEL_DEPLOYMENT_NAME` environment variable
+- `MCP_SERVER_URL` environment variable (optional, defaults to placeholder)
+- `MCP_API_KEY` environment variable (optional, defaults to placeholder)
+- Azure CLI authentication (`az login`)
+- .env file in `agents/azure_ai_agents/` directory
+
+**Usage:**
+```bash
+python mcp_api_key_auth.py
+```
 
 ## 🚀 Getting Started
 
-### For Azure AI Foundry MCP Integration
+### Common Prerequisites for All Examples
+
+1. **Azure AI Foundry Project**: Access to an Azure AI Foundry project with deployed models
+2. **Environment Variables**: Create/update `.env` file in `agents/azure_ai_agents/` directory with:
+   ```
+   AZURE_AI_PROJECT_ENDPOINT=https://your-project.services.ai.azure.com/api/projects/your-project-id
+   AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-4o
+   ```
+3. **Azure CLI Authentication**: Run `az login` to authenticate with Azure
+4. **Dependencies**: Install agent-framework packages:
+   ```bash
+   pip install agent-framework --pre
+   ```
+
+### For Azure AI Foundry MCP Integration (Notebook)
 
 1. **Open the Notebook**: Navigate to [`azure_ai_with_mcp.ipynb`](azure_ai_with_mcp.ipynb)
-2. **Configure Environment**: Set up your `.env` file in the `agents/azure_ai_agents/` directory
+2. **Verify Environment**: Ensure `.env` file is configured in `agents/azure_ai_agents/`
 3. **Run Examples**: Execute cells sequentially to see each MCP pattern in action
 4. **Experiment**: Modify queries, approval modes, and tool configurations
 
-### For Agent as MCP Server
+### For Agent as MCP Server (Python Script)
 
-Run the Python script to expose your agent as an MCP server that other applications can connect to.
+1. **Set Environment Variables**: Ensure `.env` file is configured
+2. **Run the Script**: 
+   ```bash
+   python agent_as_mcp_server.py
+   ```
+3. **Configure MCP Client**: Update your MCP client configuration to connect to the server
+
+### For MCP API Key Authentication (Python Script)
+
+1. **Set Environment Variables**: Ensure `.env` file includes Azure AI variables
+2. **Optional MCP Server Config**: Add `MCP_SERVER_URL` and `MCP_API_KEY` if testing with a real MCP server
+3. **Run the Script**:
+   ```bash
+   python mcp_api_key_auth.py
+   ```
 
 ## 📖 Learn More
 
