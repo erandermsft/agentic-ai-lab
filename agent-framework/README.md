@@ -74,6 +74,24 @@ Interactive notebooks demonstrating middleware patterns for agent execution inte
 
 📖 **[View Middleware Documentation](middleware/README.md)** - Complete middleware guide with 9 notebooks
 
+### 🧠 **[context_providers/](context_providers/)** - Agent Memory & Context Management
+Examples demonstrating how to build agents with memory using context providers:
+- Custom memory providers for long-term memory
+- User fact extraction and storage
+- Context injection before agent invocation
+- Memory persistence patterns
+- Multi-provider composition with AggregateContextProvider
+
+📖 **[View Context Providers Documentation](context_providers/README.md)** - Agent memory patterns guide
+
+### 📊 **[observability/](observability/)** - Observability & Telemetry
+Comprehensive examples demonstrating observability and telemetry collection for agents and workflows using OpenTelemetry and Azure Application Insights:
+- **Agent Observability**: Trace LLM calls, tool executions, and token usage
+- **Chat Client Observability**: Monitor Azure AI chat clients with multiple tools
+- **Azure AI Foundry Integration**: Automatic Application Insights integration
+- **Custom Spans & Metrics**: Add custom telemetry to your applications
+
+
 ### 🎨 **[devui/](devui/)** - Development UI & Testing
 Sample agents and workflows designed for interactive testing with the Agent Framework DevUI - a lightweight web interface for agent development.
 
@@ -251,7 +269,9 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 1. `azure_ai_with_existing_agent.ipynb` - Agent persistence (agents/azure_ai_agents/)
 2. `azure_ai_with_existing_thread.ipynb` - Conversation management (agents/azure_ai_agents/)
 3. `azure_ai_with_file_search.ipynb` - Document search (agents/azure_ai_agents/)
-4. **Middleware Basics (middleware/)**:
+4. **Context Providers (context_providers/)**:
+   - `1-azure_ai_memory_context_providers.ipynb` - Agent memory and user fact extraction
+5. **Middleware Basics (middleware/)**:
    - `1-agent_and_run_level_middleware.ipynb` - Middleware fundamentals
    - `2-function_based_middleware.ipynb` - Function-based patterns
    - `3-class_based_middleware.ipynb` - Class-based patterns
@@ -298,10 +318,23 @@ Sample agents and workflows designed for interactive testing with the Agent Fram
 - ✅ Agent reuse patterns
 - ✅ Tool combination strategies
 - ✅ User approval workflows
+- ✅ Context providers for agent memory
+- ✅ Custom memory extraction and injection
 - ✅ Middleware security and validation
 - ✅ Exception handling with middleware
 - ✅ Result transformation and streaming
 - ✅ Agent-to-MCP server exposure
+
+### Observability & Monitoring
+- ✅ OpenTelemetry integration for agents and workflows
+- ✅ Azure Application Insights automatic setup
+- ✅ Trace ID generation for debugging
+- ✅ Agent invocation and LLM call tracing
+- ✅ Tool execution monitoring
+- ✅ Workflow executor and message passing spans
+- ✅ Token usage and performance metrics
+- ✅ Custom spans and metrics
+- ✅ Application Insights query patterns
 
 ## 💡 Tips for Success
 
@@ -395,16 +428,22 @@ Starts server at http://localhost:8080 with all samples
 ### Phase 1: Single Agents (agents/azure_ai_agents/)
 Start with the Azure AI agent notebooks to master individual agent patterns, tool integration, and Azure AI services.
 
-### Phase 2: MCP Integration (agents/mcp/)
+### Phase 2: Agent Memory (context_providers/)
+Learn how to build agents with long-term memory using context providers for fact extraction, storage, and context injection.
+
+### Phase 3: MCP Integration (agents/mcp/)
 Learn how to connect agents to external tools and data sources using Model Context Protocol, and expose your agents as MCP servers.
 
-### Phase 3: Middleware Patterns (middleware/)
+### Phase 4: Observability & Telemetry (observability/)
+Master observability patterns for agents and workflows, including Application Insights integration, custom spans, and trace analysis.
+
+### Phase 5: Middleware Patterns (middleware/)
 Master execution interception with middleware for security, logging, exception handling, and result transformation across 9 interactive notebooks.
 
-### Phase 4: Multi-Agent Workflows (workflows/)
+### Phase 6: Multi-Agent Workflows (workflows/)
 Progress to the workflows folder to learn orchestration, state management, and complex multi-agent coordination.
 
-### Phase 5: Interactive Development (devui/)
+### Phase 7: Interactive Development (devui/)
 Use DevUI to experiment with your agents and workflows in a visual, interactive environment.
 
 ---

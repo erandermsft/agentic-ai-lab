@@ -183,19 +183,65 @@ Follow this structured learning path to master Azure AI Foundry:
 
 The **Microsoft Agent Framework** is an open-source development kit that unifies and extends Semantic Kernel and AutoGen into the next-generation foundation for AI agent development. Built by the same teams, it offers two primary capabilities: **AI Agents** for autonomous decision-making with tool integration and conversation management, and **Workflows** for orchestrating complex multi-agent processes with type safety and checkpointing. Currently in public preview, it combines AutoGen's simple abstractions with Semantic Kernel's enterprise features while adding robust workflow capabilities.
 
-📖 [Official Documentation](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) • 🔗 [GitHub Repository](https://github.com/microsoft/agent-framework)
+📖 [Official Documentation](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) • 🔗 [GitHub Repository](https://github.com/microsoft/agent-framework) • 📚 [Complete Guide](agent-framework/README.md)
 
+#### 🤖 Azure AI Agents (`agents/azure_ai_agents/`)
 | Notebook | Description |
 |----------|-------------|
-| 🤖 [Basic Agent Usage](agent-framework/azure_ai_basic.ipynb) | Fundamental agent concepts with automatic lifecycle management |
-| ⚙️ [Explicit Settings](agent-framework/azure_ai_with_explicit_settings.ipynb) | Agent creation with explicit configuration patterns |
-| 🔄 [Existing Agent Management](agent-framework/azure_ai_with_existing_agent.ipynb) | Working with pre-existing agents using agent IDs |
-| 💬 [Thread Management](agent-framework/azure_ai_with_existing_thread.ipynb) | Conversation thread continuity and management |
-| 🔧 [Function Tools](agent-framework/azure_ai_with_function_tools.ipynb) | Comprehensive function tool integration patterns |
-| 💻 [Code Interpreter](agent-framework/azure_ai_with_code_interpreter.ipynb) | Python code execution and mathematical problem solving |
-| 📄 [File Search](agent-framework/azure_ai_with_file_search.ipynb) | Document-based question answering with file uploads |
-| 🌐 [Bing Grounding](agent-framework/azure_ai_with_bing_grounding.ipynb) | Web search integration using Bing Grounding |
-| 🔌 [MCP Integration](agent-framework/azure_ai_with_mcp.ipynb) | Model Context Protocol (MCP) tool integration |
+| 🤖 [Basic Agent Usage](agent-framework/agents/azure_ai_agents/azure_ai_basic.ipynb) | Fundamental agent concepts with automatic lifecycle management |
+| ⚙️ [Explicit Settings](agent-framework/agents/azure_ai_agents/azure_ai_with_explicit_settings.ipynb) | Agent creation with explicit configuration patterns |
+| 🔄 [Existing Agent Management](agent-framework/agents/azure_ai_agents/azure_ai_with_existing_agent.ipynb) | Working with pre-existing agents using agent IDs |
+| 💬 [Thread Management](agent-framework/agents/azure_ai_agents/azure_ai_with_existing_thread.ipynb) | Conversation thread continuity and management |
+| 🔧 [Function Tools](agent-framework/agents/azure_ai_agents/azure_ai_with_function_tools.ipynb) | Comprehensive function tool integration patterns |
+| 💻 [Code Interpreter](agent-framework/agents/azure_ai_agents/azure_ai_with_code_interpreter.ipynb) | Python code execution and mathematical problem solving |
+| 📄 [File Search](agent-framework/agents/azure_ai_agents/azure_ai_with_file_search.ipynb) | Document-based question answering with file uploads |
+| 🌐 [Bing Grounding](agent-framework/agents/azure_ai_agents/azure_ai_with_bing_grounding.ipynb) | Web search integration using Bing Grounding |
+
+#### 🔌 Model Context Protocol (`agents/mcp/`)
+| Implementation | Description |
+|----------|-------------|
+| 🔌 [Azure AI with MCP](agent-framework/agents/mcp/azure_ai_with_mcp.ipynb) | Hosted MCP tools with Azure AI Foundry agents (basic, multi-tool, thread-based examples) |
+| 🖥️ [Agent as MCP Server](agent-framework/agents/mcp/agent_as_mcp_server.py) | Expose Agent Framework agents as MCP servers |
+| 🔐 [MCP API Key Auth](agent-framework/agents/mcp/mcp_api_key_auth.py) | API key authentication patterns for MCP servers |
+
+#### 🔄 Workflows (`workflows/`)
+| Category | Description |
+|----------|-------------|
+| 📚 [Start Here](agent-framework/workflows/_start-here/) | Foundational workflow concepts, executors, edges, agents, streaming |
+| 🎯 [Orchestration](agent-framework/workflows/orchestration/) | Sequential and concurrent agent coordination patterns |
+| 💾 [Checkpointing](agent-framework/workflows/checkpointing/) | State persistence for long-running workflows |
+| 👤 [Human-in-the-Loop](agent-framework/workflows/human-in-the-loop/) | Interactive approval and feedback patterns |
+| 🧠 [Magentic](agent-framework/workflows/magentic/) | AI-driven multi-agent planning and execution |
+
+#### 🛡️ Middleware (`middleware/`)
+| Notebook | Description |
+|----------|-------------|
+| 🔧 [Agent & Run Level](agent-framework/middleware/1-agent_and_run_level_middleware.ipynb) | Middleware fundamentals and scoping |
+| 🔨 [Function-Based](agent-framework/middleware/2-function_based_middleware.ipynb) | Function-based middleware patterns |
+| 🏗️ [Class-Based](agent-framework/middleware/3-class_based_middleware.ipynb) | Class-based middleware with inheritance |
+| 🎨 [Decorator Middleware](agent-framework/middleware/4-decorator_middleware.ipynb) | @agent_middleware and @function_middleware decorators |
+| 💬 [Chat Middleware](agent-framework/middleware/5-chat_middleware.ipynb) | Message interception and modification |
+| ⚠️ [Exception Handling](agent-framework/middleware/6-exception_handling_with_middleware.ipynb) | Error handling and recovery patterns |
+| 🛑 [Termination](agent-framework/middleware/7-middleware_termination.ipynb) | Early termination and control flow |
+| 🔄 [Result Override](agent-framework/middleware/8-override_result_with_middleware.ipynb) | Streaming and non-streaming result modification |
+| 📦 [Shared State](agent-framework/middleware/9-shared_state_middleware.ipynb) | State management with middleware containers |
+
+#### 🧠 Context Providers (`context_providers/`)
+| Notebook | Description |
+|----------|-------------|
+| 💾 [Azure AI Memory](agent-framework/context_providers/1-azure_ai_memory_context_providers.ipynb) | Agent memory with user fact extraction, tone detection, and persistent context |
+
+#### 📊 Observability (`observalibility/`)
+| Notebook | Description |
+|----------|-------------|
+| 👁️ [Agent Observability](agent-framework/observalibility/1-azure_ai_agent_observability.ipynb) | Trace LLM calls, tool executions, token usage with Application Insights |
+| 💬 [Chat Client Observability](agent-framework/observalibility/2-azure_ai_chat_client_with_observability.ipynb) | Monitor Azure AI chat clients with multiple tools |
+
+#### 🎨 Development UI (`devui/`)
+| Implementation | Description |
+|----------|-------------|
+| 🌐 [In-Memory Mode](agent-framework/devui/in_memory_mode.py) | Quick-start web interface for testing agents |
+| 📁 [Sample Agents](agent-framework/devui/) | Pre-built examples: Foundry agent, weather agent, spam workflow, fanout workflow |
 
 ### 🏗️ Phase 7: Semantic Kernel + AutoGen
 **Location:** `sk-and-autogen/`
