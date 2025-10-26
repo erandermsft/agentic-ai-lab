@@ -64,15 +64,20 @@ Graph-based workflow examples showing how to connect multiple agents and functio
 
 📖 **[View Workflows Documentation](workflows/README.md)** - Comprehensive guide with 40+ workflow samples
 
-### 🛡️ **[middleware/](middleware/)** - Middleware Patterns & Interceptors
-Interactive notebooks demonstrating middleware patterns for agent execution interception:
-- Agent, function, and chat middleware
-- Security validation and logging
-- Exception handling and retry logic
-- Result transformation and streaming support
-- Shared state management
+### 🧵 **[threads/](threads/)** - Multi-Turn Conversation Threading
+Interactive notebooks demonstrating conversation management, thread serialization, and message persistence patterns:
 
-📖 **[View Middleware Documentation](middleware/README.md)** - Complete middleware guide with 9 notebooks
+**Azure AI Foundry Service-Managed Threads:**
+- **`1-azure-ai-thread-serialization.ipynb`** - Production-ready Azure AI agent thread serialization (~50 bytes, cloud-stored history)
+
+**Azure OpenAI Custom Threading Patterns:**
+- **`2-custom_chat_message_store_thread.ipynb`** ✅ - Custom `ChatMessageStoreProtocol` implementation (converted from Python script, fully tested)
+- **`3-redis_chat_message_store_thread.ipynb`** ⚠️ - Redis-based distributed storage (5 examples, requires Redis server)
+- **`4-suspend_resume_thread.ipynb`** ✅ - Thread suspend/resume for service-managed and in-memory threads (converted from Python script, fully tested)
+
+📖 **[View Threading Documentation](threads/README.md)** - Complete guide with testing results and conversion notes
+
+> **Note**: Notebooks 2, 3, and 4 were converted from original Python scripts with comprehensive markdown documentation, Azure OpenAI migration, and technical fixes for Pydantic models and JSON serialization.
 
 ### 🧠 **[context_providers/](context_providers/)** - Agent Memory & Context Management
 Examples demonstrating how to build agents with memory using context providers:
