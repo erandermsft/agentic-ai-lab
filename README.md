@@ -1,12 +1,12 @@
-# 🚀 Azure AI Foundry E2E Workshop
+# 🚀 Azure AI Foundry & Agents Workshop
 
 [![Azure AI Foundry](https://img.shields.io/badge/Azure%20AI-Foundry-blue?style=for-the-badge&logo=microsoft)](https://ai.azure.com)
 [![Python](https://img.shields.io/badge/Python-3.10+-green?style=for-the-badge&logo=python)](https://python.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Lab-orange?style=for-the-badge&logo=jupyter)](https://jupyter.org)
 
-**End-to-End Azure AI Foundry Development Laboratory**
+**End-to-End Azure AI Foundry And Agents Development Laboratory**
 
-*Master Azure AI Foundry through hands-on experimentation and real-world applications*
+*Master Azure AI Foundry and Agents through hands-on experimentation and real-world applications*
 
 ---
 
