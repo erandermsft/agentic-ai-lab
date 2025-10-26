@@ -46,16 +46,16 @@
     | Azure Application Insights | Monitoring for the AI Foundry and the Agents |
 
 ## Resource Creation 
-1. ``` ➜  ai-foundry-e2e-lab git:(main) ✗ az login```
-1. ``` ➜  ai-foundry-e2e-lab git:(main) ✗ task up``` 
-1. ``` ➜  ai-foundry-e2e-lab git:(main) ✗ task creds ```  
-1. ``` ➜  ai-foundry-e2e-lab git:(main) ✗ source .venv/bin/activate``` 
-1. ``` ➜  ai-foundry-e2e-lab git:(main) ✗ source .env``` 
+1. ``` ➜  agentic-ai-lab git:(main) ✗ az login```
+1. ``` ➜  agentic-ai-lab git:(main) ✗ task up``` 
+1. ``` ➜  agentic-ai-lab git:(main) ✗ task creds ```  
+1. ``` ➜  agentic-ai-lab git:(main) ✗ source .venv/bin/activate``` 
+1. ``` ➜  agentic-ai-lab git:(main) ✗ source .env``` 
 
 ### Example Deployment
 ```bash
-    ➜  ai-foundry-e2e-lab git:(main) ✗ az login
-    ➜  ai-foundry-e2e-lab git:(main) ✗ task up
+    ➜  agentic-ai-lab git:(main) ✗ az login
+    ➜  agentic-ai-lab git:(main) ✗ task up
     task: [init] terraform workspace new eastus2 || true
     Created and switched to workspace "eastus2"!
 
@@ -114,20 +114,20 @@
 ### Getting Credentials
 __Note__: This is optional after running the `task up` or `task apply` command to re-populate the `.env` file with the correct values.
 ```bash    
-    ➜  ai-foundry-e2e-lab git:(main) ✗ task creds
+    ➜  agentic-ai-lab git:(main) ✗ task creds
         🔹 Now copy and paste the following command to source the variables:
         ➡️ `source ../.env`    
 ```
 
 ### Starting OTEL Endpoint
 ```bash
-    ➜  ai-foundry-e2e-lab git:(main) ✗ task otel
+    ➜  agentic-ai-lab git:(main) ✗ task otel
 ```
 
 ### Setting up Python Virtual Environment
 __Note__: This is optional if you need to re-create the virtual python environment.
 ```bash
-    ➜  ai-foundry-e2e-lab git:(main) ✗ task venv-up
+    ➜  agentic-ai-lab git:(main) ✗ task venv-up
     task: [venv-up] python -m venv .venv
     task: [venv-up] pip install "agent-framework[viz]" --pre
     Defaulting to user installation because normal site-packages is not writeable
@@ -145,7 +145,7 @@ __Note__: This is optional if you need to re-create the virtual python environme
 
 ### Tearing Down the Environment
 ```bash
-    ➜  ai-foundry-e2e-lab git:(main) ✗ task down
+    ➜  agentic-ai-lab git:(main) ✗ task down
 ```
 
 

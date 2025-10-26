@@ -41,7 +41,7 @@ This comprehensive laboratory transforms you from an AI enthusiast into an Azure
 ## 📁 Repository Structure
 
 ```
-ai-foundry-e2e-lab/
+agentic-ai-lab/
 ├── 📚 initial-setup/           # Start here - Authentication & environment setup
 ├── 💬 chat-rag/               # Chat completion and RAG fundamentals
 ├── 🤖 agents/                 # AI Agents development and tools (includes multi-agent)
@@ -62,8 +62,8 @@ ai-foundry-e2e-lab/
 
 ```powershell
 # Clone the laboratory repository
-git clone https://github.com/dhangerkapil/ai-foundry-e2e-lab.git
-cd ai-foundry-e2e-lab
+git clone https://github.com/dhangerkapil/agentic-ai-lab.git
+cd agentic-ai-lab
 
 # Verify Python version
 python --version  # Should be 3.10 or higher
@@ -378,7 +378,7 @@ az account show
 - 📖 [Azure AI Foundry Documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)
 - 🎥 [Video Tutorials](https://learn.microsoft.com/en-us/shows/ai-show/)
 - 💡 [Best Practices Guide](https://learn.microsoft.com/en-us/azure/ai-services/responsible-use-of-ai-overview)
-- 🔍 [GitHub Issues](https://github.com/dhangerkapil/ai-foundry-e2e-lab/issues) - Report bugs or request features
+- 🔍 [GitHub Issues](https://github.com/dhangerkapil/agentic-ai-lab/issues) - Report bugs or request features
 
 ---
 
@@ -402,4 +402,4 @@ Please review our [Contributing Guide](CONTRIBUTING.md) for:
 ## 📄 License & Attribution
 
 **License:** MIT License  
-**Repository:** [github.com/dhangerkapil/ai-foundry-e2e-lab](https://github.com/dhangerkapil/ai-foundry-e2e-lab)
+**Repository:** [github.com/dhangerkapil/agentic-ai-lab](https://github.com/dhangerkapil/agentic-ai-lab)

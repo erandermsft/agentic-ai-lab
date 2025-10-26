@@ -38,7 +38,7 @@ Before running this project, ensure you have:
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd ai-foundry-e2e-lab
+cd agentic-ai-lab
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -118,7 +118,7 @@ Type `quit` to exit the application.
 ## 📁 Project Structure
 
 ```
-ai-foundry-e2e-lab/
+agentic-ai-lab/
 ├── .env                          # ✅ Root configuration (already configured)
 ├── requirements.txt              # ✅ All project dependencies
 ├── agents-with-mcp/              # 👈 MCP demonstration
