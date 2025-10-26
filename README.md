@@ -239,8 +239,6 @@ The **Microsoft Agent Framework** is an open-source development kit that unifies
 | 📦 [Redis Message Store](agent-framework/threads/3-redis_chat_message_store_thread.ipynb) | ⚠️ Requires Redis | Distributed conversation storage with 5 comprehensive examples |
 | 🔄 [Suspend/Resume Threads](agent-framework/threads/4-suspend_resume_thread.ipynb) | ✅ Tested | Service-managed & in-memory thread persistence patterns (converted from Python script) |
 
-> **📝 Note**: Notebooks 2, 3, and 4 were converted from original Python scripts (`custom_chat_message_store_thread.py`, `redis_chat_message_store_thread.py`, `suspend_resume_thread.py`) with comprehensive markdown documentation based on [Microsoft Agent Framework Multi-Turn Conversation Guide](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/multi-turn-conversation). All notebooks migrated to Azure OpenAI with technical fixes for Pydantic models and JSON serialization. See [threads/README.md](agent-framework/threads/README.md) for testing results and technical details.
-
 #### 📊 Observability (`observalibility/`)
 | Notebook | Description |
 |----------|-------------|
