@@ -46,7 +46,7 @@ The Microsoft Agent Framework is the next generation of tooling from the Semanti
    ```
    Minimum variables:
    ```
-   AZURE_AI_PROJECT_ENDPOINT="https://<project-name>.<region>.copilot.azure.com"
+   AZURE_AI_PROJECT_ENDPOINT="https://<project-name>.services.ai.azure.com/api/projects/firstProject"
    AZURE_AI_MODEL_DEPLOYMENT_NAME="<deployment-name>"
    AZURE_SUBSCRIPTION_ID="<subscription-id>"
    ```
