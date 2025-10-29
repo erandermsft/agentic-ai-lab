@@ -1,0 +1,6 @@
+# Evaluation Requirements
+# Azure AI Projects SDK for cloud-based evaluation
+azure-ai-projects>=1.0.0
+
+# Azure authentication
+azure-identity>=1.14.0

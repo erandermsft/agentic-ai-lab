@@ -1,0 +1,44 @@
+{
+  "queries": [
+    {
+      "id": "q1",
+      "query": "Find me some pasta recipes"
+    },
+    {
+      "id": "q2",
+      "query": "What ingredients do I need for carbonara?"
+    },
+    {
+      "id": "q3",
+      "query": "I want to make something with chicken"
+    },
+    {
+      "id": "q4",
+      "query": "Suggest some quick recipes for dinner"
+    },
+    {
+      "id": "q5",
+      "query": "Do you have any soup recipes?"
+    },
+    {
+      "id": "q6",
+      "query": "What can I make for dessert?"
+    },
+    {
+      "id": "q7",
+      "query": "Show me vegetarian options"
+    },
+    {
+      "id": "q8",
+      "query": "I need ingredients for chicken stir fry"
+    },
+    {
+      "id": "q9",
+      "query": "What recipes use tomatoes?"
+    },
+    {
+      "id": "q10",
+      "query": "Give me some meat-based recipes"
+    }
+  ]
+}
