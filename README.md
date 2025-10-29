@@ -99,33 +99,32 @@ pip install -r requirements.txt
    | **Chat/Completion** | `gpt-4o`, `gpt-4o-mini` | Primary reasoning & conversation |
    | **Text Embeddings** | `text-embedding-3-large` | Vector search & RAG |
 
-3. **Configure an Azure OpenAI Resource**
-   - Create an Azure OpenAI resource in the same region as your AI Foundry project
-   - Connect this resource to your AI Foundry project
-      - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Azure OpenAI
+   - On the left Nav Menu of the foundry portal go to Models+endpoints
+   - Click Deploy a model button-->Deploy base model
+      - Search for the models in the table above , select a model, click confirm and Deploy and connect
+       <img src="images/DeployModels.png" width="75%"/>
 
-<img src="foundry-connection.png" width="75%"/>
-
-4. **Configure an Azure Search Service**
+3. **Configure an Azure Search Service**
    - Create an Azure AI Search resource in Azure
    - Connect this resource to your AI Foundry project
       - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Azure AI Search
+      <img src="images/foundry-connection.png" width="75%"/>
 
-5. **Configure Grounding with Bing Search**
+4. **Configure Grounding with Bing Search**
    - Create a new Grounding with Bing Search resource in Azure
    - Connect this resource to your AI Foundry project
       - Navigate to your AI Foundry project → Management Center → Connected Resources → Add Connection → Select Grounding with Bing Search
 
-6. **Create Content Understanding Resource**
+5. **Create Content Understanding Resource**
    - Create an Azure AI Content Understanding multi-service resource following the [official documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/how-to/create-multi-service-resource)
    - Ensure the resource is created in a supported region (westus, swedencentral, australiaeast)
   
-7. **Configure Environment Variables**
+6. **Configure Environment Variables**
    - Copy `.env.example` to `.env` in the root directory and update values accordingly
    - This repository expects the `.env` file to be in the root directory, if you want to store it elsewhere or name it something else, update the `load_dotenv()` calls in notebooks
    - Many of the Environment Variables needed can be found in the Overview tab of your Azure AI Foundry project or the connected resources in the Management Center tab
    - For example, AZURE_OPENAI variables-
-<img src="env-example.png" width="75%"/>   
+<img src="images/env-example.png" width="75%"/>  
 
 ---
 
