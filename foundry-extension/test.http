@@ -1,0 +1,29 @@
+### Health Check
+GET http://<youcontainerappurl>/health
+
+### Root Endpoint
+GET http://<youcontainerappurl>8000/
+
+### Query Architect Agent
+POST http://<youcontainerappurl>/query
+Content-Type: application/json
+
+{
+  "message": "How do I deploy an agent to Azure Container Apps?"
+}
+
+### Another Query Example
+POST https://<youcontainerappurl>/query
+Content-Type: application/json
+
+{
+  "message": "What are the best practices for Azure Well-Architected Framework?"
+}
+
+###
+POST http://localhost:8000/query
+   Content-Type: application/json
+
+   {
+     "message": "How do I deploy an agent to Azure Container Apps?"
+   }

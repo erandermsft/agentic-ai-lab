@@ -27,4 +27,5 @@ mcp>=1.13.0
 fastmcp>=2.11.0
 
 agent-framework
-
+fastapi
+uvicorn
